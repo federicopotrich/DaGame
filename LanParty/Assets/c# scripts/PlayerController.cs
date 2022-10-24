@@ -26,12 +26,13 @@ public class PlayerController : MonoBehaviour
         //Debug.Log();
         if(collisionDetected.gameObject.tag == "scale"){
             piani[piano].SetActive(false);
+
             if(collisionDetected.gameObject.name=="up"){
-                piano++;
                 piani[piano+1].SetActive(true);
-            }else if(collisionDetected.gameObject.name=="up"){
-                piano--;
+                piano++;
+            }else if(collisionDetected.gameObject.name=="down"){
                 piani[piano-1].SetActive(true);
+                piano--;
             }
             //pianoTerra.SetActive(false);
             //piano1.SetActive(true);
