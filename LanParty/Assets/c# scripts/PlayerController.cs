@@ -23,7 +23,6 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collisionDetected){
-        //Debug.Log();
         if(collisionDetected.gameObject.tag == "scale"){
             piani[piano].SetActive(false);
 
@@ -34,15 +33,15 @@ public class PlayerController : MonoBehaviour
                 piani[piano-1].SetActive(true);
                 piano--;
             }
-            //pianoTerra.SetActive(false);
-            //piano1.SetActive(true);
-
 
             if(collisionDetected.gameObject.transform.parent.gameObject.tag == "sinistra")
                 this.transform.position = new Vector3(this.transform.position.x+5, this.transform.position.y, 0);
             else
                 this.transform.position = new Vector3(this.transform.position.x-5, this.transform.position.y, 0);
 
+        }
+        if(collisionDetected.gameObject.tag == "Porta"){
+            Debug.Log(collisionDetected.gameObject.transform.parent);
         }
     }
 }

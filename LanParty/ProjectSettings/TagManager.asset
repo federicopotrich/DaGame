@@ -7,6 +7,7 @@ TagManager:
   - scale
   - sinistra
   - destra
+  - Porta
   layers:
   - Default
   - TransparentFX
