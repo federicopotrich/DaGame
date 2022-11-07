@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     int piano = 0;
     public GameObject [] piani;
     public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,20 @@ public class PlayerController : MonoBehaviour
     {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
+        
+        this.GetComponent<Animator>().SetFloat("speed", Mathf.Abs(x));
+
+        if(x < 0){
+            this.GetComponent<SpriteRenderer>().flipX = true;
+        }else if(x > 0){
+            this.GetComponent<SpriteRenderer>().flipX = false;
+        }
+        
+        
+        if(x == 0 && y != 0){
+            this.GetComponent<Animator>().SetFloat("speed", 1);
+        }
+
         Vector3 movement = new Vector3(x, y, 0);
         transform.Translate(movement * speed * Time.deltaTime);
     }
