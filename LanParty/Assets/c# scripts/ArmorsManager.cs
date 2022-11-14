@@ -6,8 +6,8 @@ using UnityEngine;
 public class ArmorsManager : ScriptableObject
 {
     public string nome;
-    public Sprite imageWeapon;
-    public int dmg;
+    public Sprite imageArmor;
+    public int defence;
     public string rarita;
     public int cost;
 }
