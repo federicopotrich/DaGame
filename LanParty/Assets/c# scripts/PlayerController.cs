@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public GameObject [] piani;
     public float speed;
 
+    public GameObject canvasGame;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +39,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(movement * speed * Time.deltaTime);
 
         if(Input.GetKeyUp(KeyCode.P)){
-            Debug.Log("Shop");
+            canvasGame.SetActive(!canvasGame.activeSelf);
         }
     }
 
