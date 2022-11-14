@@ -50,9 +50,9 @@ public class PlayerController : MonoBehaviour
             }
 
             if(collisionDetected.gameObject.transform.parent.gameObject.tag == "sinistra")
-                this.transform.position = new Vector3(this.transform.position.x+5, this.transform.position.y, 0);
+                this.transform.position = new Vector3(collisionDetected.gameObject.transform.position.x+5, collisionDetected.gameObject.transform.position.y, 0);
             else
-                this.transform.position = new Vector3(this.transform.position.x-5, this.transform.position.y, 0);
+                this.transform.position = new Vector3(collisionDetected.gameObject.transform.position.x-5, collisionDetected.gameObject.transform.position.y, 0);
 
         }
         if(collisionDetected.gameObject.tag == "Porta"){
