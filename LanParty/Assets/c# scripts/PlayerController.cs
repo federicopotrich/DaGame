@@ -35,6 +35,10 @@ public class PlayerController : MonoBehaviour
 
         Vector3 movement = new Vector3(x, y, 0);
         transform.Translate(movement * speed * Time.deltaTime);
+
+        if(Input.GetKeyUp(KeyCode.P)){
+            Debug.Log("Shop");
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collisionDetected){
