@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public WeponsManager arco;
+    public WeponsManager [] armi;
+    public ArmorsManager [] armature;
     void Start()
     {
-        Debug.Log(arco.dmg);
+        
     }
 
     // Update is called once per frame
