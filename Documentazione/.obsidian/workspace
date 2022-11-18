@@ -7,8 +7,12 @@
         "id": "5ecadfd262cf3b6e",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "codice/Piani.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "codice/Piani.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "codice/Piani.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +116,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "codice/Piani.md"
+              }
             }
           }
         ]
@@ -123,8 +131,9 @@
   "active": "5ecadfd262cf3b6e",
   "lastOpenFiles": [
     "Reparto Artistico/Disegno/Scritti/Moneta.md",
+    "Idee/Idee Negozio.md",
+    "codice/Categorie oggetti.md",
     "Reparto Artistico/Disegno/Sprite/Moneta.png",
-    "Idee/Idee stanze.md",
-    "Idee/Idee Negozio.md"
+    "Idee/Idee stanze.md"
   ]
 }

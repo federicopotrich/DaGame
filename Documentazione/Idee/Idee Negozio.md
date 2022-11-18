@@ -2,8 +2,8 @@
 
 ## Negozio piani 
  - [ ] Preview personaggi
- - [ ] **Soldi** (Zani?) in alto a sinistra
- - [ ] Categorie (Armi; Armature; Spell/Abilità; Aumento Statistiche)
+ - [x] **Soldi** (*Marki*) in alto a sinistra (vedi: [[Moneta]])
+ - [ ] Categorie (Armi; Armature; Spell/Abilità; Aumento Statistiche)(Vedi [[Categorie oggetti]])
 
 ## Negozio Duca Raffa
 - [ ] Asta
