@@ -7,7 +7,7 @@
         "id": "5ecadfd262cf3b6e",
         "type": "leaf",
         "state": {
-          "type": "empty",
+          "type": "graph",
           "state": {}
         }
       }
@@ -121,5 +121,10 @@
     "collapsed": true
   },
   "active": "5ecadfd262cf3b6e",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "Reparto Artistico/Disegno/Scritti/Moneta.md",
+    "Reparto Artistico/Disegno/Sprite/Moneta.png",
+    "Idee/Idee stanze.md",
+    "Idee/Idee Negozio.md"
+  ]
 }
