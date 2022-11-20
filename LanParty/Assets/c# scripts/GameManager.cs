@@ -31,8 +31,6 @@ public class GameManager : MonoBehaviour
             gInstantiated.transform.SetParent(container.transform);
             gInstantiated.transform.localScale = new Vector3(1, 1, 1);
 
-            
-
             gInstantiated.transform.Find("Image").GetComponent<UnityEngine.UI.Image>().sprite = armature[i].imageArmor;
             gInstantiated.transform.Find("TextNome").GetComponent<TMPro.TextMeshProUGUI>().text = armature[i].nome;
             gInstantiated.transform.Find("TextDmg").GetComponent<TMPro.TextMeshProUGUI>().text = ""+armature[i].defence;
