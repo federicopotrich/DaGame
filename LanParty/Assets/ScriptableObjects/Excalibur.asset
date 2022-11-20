@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36982efbb17f99547814ba8f5b9b73a3, type: 3}
-  m_Name: Arco
+  m_Name: Excalibur
   m_EditorClassIdentifier: 
-  nome: Arco
+  nome: 
   imageWeapon: {fileID: 0}
-  dmg: 15
-  rarita: comune
-  cost: 10
+  dmg: 0
+  rarita: 
+  cost: 0
