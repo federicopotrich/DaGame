@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36982efbb17f99547814ba8f5b9b73a3, type: 3}
   m_Name: Excalibur
   m_EditorClassIdentifier: 
-  nome: 
-  imageWeapon: {fileID: 0}
-  dmg: 0
-  rarita: 
-  cost: 0
+  nome: Excalibur
+  imageWeapon: {fileID: 21300000, guid: 8ad9504e439aa9e41906a1e6ecd3ab8e, type: 3}
+  dmg: 10
+  rarita: Comune
+  cost: 5
