@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject container;
     public GameObject slotShop;
+
+    public GameObject inventory;
+
     void Start()
     {
         for (int i = 0; i < armi.Length; i++)
@@ -42,6 +45,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyUp(KeyCode.I)){
+            inventory.SetActive(!inventory.activeSelf);
+        }
+        if(inventory.activeSelf){
+            Time.timeScale=0;
+        }else{
+            Time.timeScale=1;
+        }
     }
 }
