@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < armi.Length; i++)
         {
             GameObject gInstantiated = GameObject.Instantiate(slotShop, new Vector3(), Quaternion.identity);
-            gInstantiated.transform.Find("");
             gInstantiated.transform.SetParent(container.transform);
             gInstantiated.transform.localScale = new Vector3(1, 1, 1);
 
@@ -52,6 +51,39 @@ public class GameManager : MonoBehaviour
             Time.timeScale=0;
         }else{
             Time.timeScale=1;
+        }
+    }
+
+    public void generateQuestion(string typeQuestion){
+        switch (typeQuestion)
+        {
+            case "Italiano":
+                Debug.Log("sei entrato nella classe di: IT");
+            break;
+            case "Storia":
+                Debug.Log("sei entrato nella classe di: ST");
+            break;
+            case "Geografia":
+                Debug.Log("sei entrato nella classe di: GE");
+            break;
+            case "Inglese":
+                Debug.Log("sei entrato nella classe di: IN");
+            break;
+            case "Matematica":
+                Debug.Log("sei entrato nella classe di: MA");
+            break;
+            case "Scienze":
+                Debug.Log("sei entrato nella classe di: SC");
+            break;
+            case "Arte":
+                Debug.Log("sei entrato nella classe di: AR");
+            break;
+            case "Musica":
+                Debug.Log("sei entrato nella classe di: MU");
+            break;
+            case "Tecnologia":
+                Debug.Log("sei entrato nella classe di: TE");
+            break;
         }
     }
 }

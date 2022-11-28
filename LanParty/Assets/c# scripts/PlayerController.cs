@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject canvasGame;
 
+    public GameManager gm;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +64,8 @@ public class PlayerController : MonoBehaviour
 
         }
         if(collisionDetected.gameObject.tag == "Porta"){
-            Debug.Log(collisionDetected.gameObject.transform.parent);
+            //Debug.Log(collisionDetected.gameObject.transform.parent);
+            gm.generateQuestion(collisionDetected.gameObject.transform.parent.name);
         }
     }
 }
