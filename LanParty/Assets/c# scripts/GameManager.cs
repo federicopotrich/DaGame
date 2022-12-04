@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
             Time.timeScale=1;
         }
 
+        placeForWeapon.transform.Find("ImageWeapon").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = weaponSelected.imageWeapon;
+
     }
 
     public void generateQuestion(string typeQuestion){
