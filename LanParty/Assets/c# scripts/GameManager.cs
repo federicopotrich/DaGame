@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject inventory;
 
+    public WeponsManager weaponSelected;
+
+    public GameObject placeForWeapon;
+
     void Start()
     {
         for (int i = 0; i < armi.Length; i++)
@@ -47,11 +51,13 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.I)){
             inventory.SetActive(!inventory.activeSelf);
         }
+
         if(inventory.activeSelf){
             Time.timeScale=0;
         }else{
             Time.timeScale=1;
         }
+
     }
 
     public void generateQuestion(string typeQuestion){

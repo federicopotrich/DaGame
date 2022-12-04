@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2702f27043426094fb46e6052a8bb726, type: 3}
+  m_Name: secondaArmor
+  m_EditorClassIdentifier: 
+  nome: 
+  imageArmor: {fileID: 21300000, guid: c711b27709674974eb217ef8a40b828d, type: 3}
+  defence: 0
+  rarita: 
+  cost: 0

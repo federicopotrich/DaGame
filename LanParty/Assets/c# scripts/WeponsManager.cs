@@ -10,4 +10,5 @@ public class WeponsManager : ScriptableObject
     public int dmg;
     public string rarita;
     public int cost;
+    public float speedFrequency;
 }

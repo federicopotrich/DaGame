@@ -8,6 +8,8 @@ TagManager:
   - sinistra
   - destra
   - Porta
+  - Weapon
+  - enemy
   layers:
   - Default
   - TransparentFX
