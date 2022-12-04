@@ -48,8 +48,10 @@ public class GameManager : MonoBehaviour
 
             Destroy(gInstantiated.GetComponent<WeaponSelection>());
 
-            Destroy(gInstantiated.GetComponent<UnityEngine.UI.Button>());
-            gInstantiated.AddComponent<UnityEngine.UI.Button>();
+            //Destroy(gInstantiated.GetComponent<UnityEngine.UI.Button>());
+
+            //gInstantiated.GetComponent<UnityEngine.UI.Button>().onClick.RemoveAllListeners();
+
             gInstantiated.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() => gInstantiated.GetComponent<armorSelected>().select());
             gInstantiated.GetComponent<armorSelected>().id = armature[i];
         }

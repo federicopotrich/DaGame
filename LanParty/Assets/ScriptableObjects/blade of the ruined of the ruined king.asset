@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36982efbb17f99547814ba8f5b9b73a3, type: 3}
   m_Name: blade of the ruined of the ruined king
   m_EditorClassIdentifier: 
-  nome: blade of the ruined of the ruined king
+  nome: blade of the ruined king
   imageWeapon: {fileID: 21300000, guid: d7c24e54f1a4b534f9aeaf4bf2d51db8, type: 3}
   dmg: 0
   rarita: 
   cost: 0
+  speedFrequency: 0
