@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject placeForWeapon;
 
+    public string [] nomiAnimazioniArmature;
+
     void Start()
     {
         for (int i = 0; i < armi.Length; i++)
