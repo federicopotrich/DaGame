@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
             gInstantiated.transform.Find("TextDmg").GetComponent<TMPro.TextMeshProUGUI>().text = ""+armi[i].dmg;
             gInstantiated.transform.Find("TextCost").GetComponent<TMPro.TextMeshProUGUI>().text = ""+armi[i].cost;
             gInstantiated.transform.Find("TextRarita").GetComponent<TMPro.TextMeshProUGUI>().text = armi[i].rarita;
+
+            gInstantiated.GetComponent<WeaponSelection>().id = armi[i];
         }
 
         for (int i = 0; i < armature.Length; i++)
