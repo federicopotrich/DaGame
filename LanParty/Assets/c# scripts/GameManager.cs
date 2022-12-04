@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject inventory;
 
     public WeponsManager weaponSelected;
+    public ArmorsManager armorSelected;
 
     public GameObject placeForWeapon;
 
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
             gInstantiated.transform.Find("TextDmg").GetComponent<TMPro.TextMeshProUGUI>().text = ""+armi[i].dmg;
             gInstantiated.transform.Find("TextCost").GetComponent<TMPro.TextMeshProUGUI>().text = ""+armi[i].cost;
             gInstantiated.transform.Find("TextRarita").GetComponent<TMPro.TextMeshProUGUI>().text = armi[i].rarita;
-
+            Destroy(gInstantiated.GetComponent<armorSelected>());
             gInstantiated.GetComponent<WeaponSelection>().id = armi[i];
         }
 
@@ -44,6 +45,13 @@ public class GameManager : MonoBehaviour
             gInstantiated.transform.Find("TextDmg").GetComponent<TMPro.TextMeshProUGUI>().text = ""+armature[i].defence;
             gInstantiated.transform.Find("TextCost").GetComponent<TMPro.TextMeshProUGUI>().text = ""+armature[i].cost;
             gInstantiated.transform.Find("TextRarita").GetComponent<TMPro.TextMeshProUGUI>().text = armature[i].rarita;
+
+            Destroy(gInstantiated.GetComponent<WeaponSelection>());
+
+            Destroy(gInstantiated.GetComponent<UnityEngine.UI.Button>());
+            gInstantiated.AddComponent<UnityEngine.UI.Button>();
+            gInstantiated.GetComponent<UnityEngine.UI.Button>().onClick.AddListener(() => gInstantiated.GetComponent<armorSelected>().select());
+            gInstantiated.GetComponent<armorSelected>().id = armature[i];
         }
     }
 
