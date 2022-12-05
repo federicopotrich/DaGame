@@ -15,5 +15,6 @@ MonoBehaviour:
   nome: Fionda
   imageWeapon: {fileID: 21300000, guid: f65e62a2c4ee4d14cbc3ce27634c666f, type: 3}
   dmg: 10
-  rarita: Comune
+  rarita: 1
   cost: 5
+  speedFrequency: 4

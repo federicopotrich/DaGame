@@ -15,6 +15,6 @@ MonoBehaviour:
   nome: Pistola Rubata
   imageWeapon: {fileID: 21300000, guid: 28f2fca2a68b50f4c95b0c9a836af999, type: 3}
   dmg: 10
-  rarita: Comune
+  rarita: 3
   cost: 5
-  speedFrequency: 0
+  speedFrequency: 3

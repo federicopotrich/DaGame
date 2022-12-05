@@ -15,5 +15,6 @@ MonoBehaviour:
   nome: Coltello
   imageWeapon: {fileID: 21300000, guid: 638076da0e9be8045aac1d0743649c7d, type: 3}
   dmg: 10
-  rarita: Comune
+  rarita: 0
   cost: 5
+  speedFrequency: 5

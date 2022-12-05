@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36982efbb17f99547814ba8f5b9b73a3, type: 3}
   m_Name: drill
   m_EditorClassIdentifier: 
-  nome: 
+  nome: Aculeo
   imageWeapon: {fileID: 21300000, guid: 902a2e77a3c412f459d07421aa878fab, type: 3}
   dmg: 15
-  rarita: 
-  cost: 0
-  speedFrequency: 1
+  rarita: 4
+  cost: 354
+  speedFrequency: 2
