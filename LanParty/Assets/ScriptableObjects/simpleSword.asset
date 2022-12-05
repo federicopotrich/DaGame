@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36982efbb17f99547814ba8f5b9b73a3, type: 3}
   m_Name: simpleSword
   m_EditorClassIdentifier: 
-  nome: simple sword
+  nome: Claymore
   imageWeapon: {fileID: 21300000, guid: 3e583499961a16d4d90fe2e848a170c2, type: 3}
-  dmg: 0
-  rarita: 
-  cost: 0
+  dmg: 50
+  rarita: 3
+  cost: 100
+  speedFrequency: 1

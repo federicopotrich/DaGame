@@ -17,3 +17,4 @@ MonoBehaviour:
   dmg: 10
   rarita: Comune
   cost: 5
+  speedFrequency: 3
