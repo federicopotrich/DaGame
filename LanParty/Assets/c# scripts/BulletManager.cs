@@ -7,6 +7,6 @@ public class BulletManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.Transform.Translate(Transform.Up);
+        this.gameObject.transform.Translate(transform.up);
     }
 }
