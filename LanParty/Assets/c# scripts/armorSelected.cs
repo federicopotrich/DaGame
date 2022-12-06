@@ -30,12 +30,18 @@ public class armorSelected : MonoBehaviour
             case "Armatura di Solair": 
                 GameObject.Find("Player").GetComponent<Animator>().SetBool("solair", true); 
                 break;
-            case "Armatura di Solair":
+            case "Godfrey":
                 GameObject.Find("Player").GetComponent<Animator>().SetBool("godfrey", true);
                 break;
-            case "Armatura di Solair":
+            case "Jotaro":
                 GameObject.Find("Player").GetComponent<Animator>().SetBool("jotaro", true);
-            break;
+                break;
+            case "Camicia":
+                GameObject.Find("Player").GetComponent<Animator>().SetBool("camicia", true);
+                break;
+            case "Knight":
+                GameObject.Find("Player").GetComponent<Animator>().SetBool("knight", true);
+                break;
                 /*case "Armatura di Solair":
                 GameObject.Find("Player").GetComponent<Animator>().SetBool("camicia", true);
                 break;*/
