@@ -4,20 +4,46 @@ using UnityEngine;
 
 public class armorSelected : MonoBehaviour
 {
+    //creo una variabile per l'ID dell'armatura
     public ArmorsManager id;
 
     public void select(){
+        //assegnazione al gamemanager dell'armor selected
         GameObject.Find("GameManager").GetComponent<GameManager>().armorSelected = id;
+
+        //Tolgo tutte le armature al personaggio
         for (int i = 0; i < GameObject.Find("GameManager").GetComponent<GameManager>().nomiAnimazioniArmature.Length; i++)
         {
             GameObject.Find("Player").GetComponent<Animator>().SetBool(GameObject.Find("GameManager").GetComponent<GameManager>().nomiAnimazioniArmature[i], false);
         }
         
-        if(id.name == "Armatura di Solair"){
+        //Cerco l'armatura con l'ID selezionato e la equipaggio
+        /*if(id.name == "Armatura di Solair"){
             //GameObject.Find("GameManager").GetComponent<GameManager>().armature.Length
             GameObject.Find("Player").GetComponent<Animator>().SetBool("solair", true);
-        }else{
+        }else if (){
             GameObject.Find("Player").GetComponent<Animator>().SetBool("godfrey", true);
+        }*/
+
+        //Cerco l'armatura con l'ID selezionato e la equipaggio
+        switch(id.name){
+            case "Armatura di Solair": 
+                GameObject.Find("Player").GetComponent<Animator>().SetBool("solair", true); 
+                break;
+            case "Armatura di Solair":
+                GameObject.Find("Player").GetComponent<Animator>().SetBool("godfrey", true);
+                break;
+            case "Armatura di Solair":
+                GameObject.Find("Player").GetComponent<Animator>().SetBool("jotaro", true);
+            break;
+                /*case "Armatura di Solair":
+                GameObject.Find("Player").GetComponent<Animator>().SetBool("camicia", true);
+                break;*/
+            default:
+                GameObject.Find("Player").GetComponent<Animator>().SetBool("jotaro", true);
+            break;
+
         }
+
     }
 }
