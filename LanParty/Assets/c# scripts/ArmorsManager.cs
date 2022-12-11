@@ -10,4 +10,5 @@ public class ArmorsManager : ScriptableObject
     public int defence;
     public string rarita;
     public int cost;
+    public string nomeAnimazione;
 }
