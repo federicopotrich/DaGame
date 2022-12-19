@@ -17,6 +17,7 @@ public class sound_musicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        music.volume = PlayerPrefs.GetFloat("volume", 0.5f);
+        fsx.volume = PlayerPrefs.GetFloat("volume", 0.5f);
     }
 }
