@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     public GameObject canvasGame;
 
     public GameManager gm;
-
+    public GameObject bullet;
+    public Transform mouth;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +43,11 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetKeyUp(KeyCode.P)){
             canvasGame.SetActive(!canvasGame.activeSelf);
+        }
+
+        if(Input.GetMouseButtonUp(0)){
+            GameObject bull = GameObject.Instantiate(bullet, Camera.main.WorldToViewportPoint(mouth.position), Quaternion.identity);
+            bull.transform.SetParent(mouth.transform);
         }
     }
 
