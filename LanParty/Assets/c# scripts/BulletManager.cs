@@ -9,7 +9,8 @@ public class BulletManager : MonoBehaviour
     {
         this.gameObject.transform.Translate(transform.up*Time.deltaTime);
     }
-    void OnColliderEnter2D(Collision2D coll){
-        Destroy(this);
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Destroy(this.gameObject);
     }
 }
