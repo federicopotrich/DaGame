@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public WeponsManager [] armi;
+    public DistanceWeapon [] armi_distanti;
     public ArmorsManager [] armature;
 
     public GameObject container;
@@ -36,6 +37,20 @@ public class GameManager : MonoBehaviour
             gInstantiated.transform.Find("TextDmg").GetComponent<TMPro.TextMeshProUGUI>().text = ""+armi[i].dmg;
             gInstantiated.transform.Find("TextCost").GetComponent<TMPro.TextMeshProUGUI>().text = ""+armi[i].cost;
             gInstantiated.transform.Find("TextRarita").GetComponent<TMPro.TextMeshProUGUI>().text = armi[i].rarita;
+            Destroy(gInstantiated.GetComponent<armorSelected>());
+            gInstantiated.GetComponent<WeaponSelection>().id = armi[i];
+        }
+        for (int i = 0; i < armi_distanti.Length; i++)
+        {
+            GameObject gInstantiated = GameObject.Instantiate(slotShop, new Vector3(), Quaternion.identity);
+            gInstantiated.transform.SetParent(container.transform);
+            gInstantiated.transform.localScale = new Vector3(1, 1, 1);
+
+            gInstantiated.transform.Find("Image").GetComponent<UnityEngine.UI.Image>().sprite = armi_distanti[i].imageWeapon;
+            gInstantiated.transform.Find("TextNome").GetComponent<TMPro.TextMeshProUGUI>().text = armi_distanti[i].nome;
+            gInstantiated.transform.Find("TextDmg").GetComponent<TMPro.TextMeshProUGUI>().text = ""+armi_distanti[i].dmg;
+            gInstantiated.transform.Find("TextCost").GetComponent<TMPro.TextMeshProUGUI>().text = ""+armi_distanti[i].cost;
+            gInstantiated.transform.Find("TextRarita").GetComponent<TMPro.TextMeshProUGUI>().text = armi_distanti[i].rarita;
             Destroy(gInstantiated.GetComponent<armorSelected>());
             gInstantiated.GetComponent<WeaponSelection>().id = armi[i];
         }
