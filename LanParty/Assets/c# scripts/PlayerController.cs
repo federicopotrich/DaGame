@@ -45,10 +45,11 @@ public class PlayerController : MonoBehaviour
             canvasGame.SetActive(!canvasGame.activeSelf);
         }
 
-        if(Input.GetMouseButtonUp(0)){
-            GameObject bull = GameObject.Instantiate(bullet, Camera.main.WorldToViewportPoint(mouth.position), Quaternion.identity);
+        if(Input.GetMouseButtonUp(0) && !gm.Shop.gameObject.activeSelf && !gm.inventory.gameObject.activeSelf){
+            GameObject bull = GameObject.Instantiate(bullet, /*Camera.main.WorldToViewportPoint*/(mouth.position), Quaternion.identity);
             bull.transform.SetParent(mouth.transform);
         }
+        
     }
 
     void OnCollisionEnter2D(Collision2D collisionDetected){

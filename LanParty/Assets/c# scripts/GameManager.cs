@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject container;
     public GameObject slotShop;
+    public GameObject Shop;
 
     public GameObject inventory;
 
@@ -18,6 +19,9 @@ public class GameManager : MonoBehaviour
     public GameObject placeForWeapon;
 
     public string [] nomiAnimazioniArmature;
+
+    public GameObject primaryGear;
+    public GameObject secondaryGear;
 
     void Start()
     {
@@ -72,7 +76,7 @@ public class GameManager : MonoBehaviour
             Time.timeScale=1;
         }
 
-        placeForWeapon.transform.Find("ImageWeapon").gameObject.GetComponent<UnityEngine.UI.Image>().sprite = weaponSelected.imageWeapon;
+        placeForWeapon.GetComponent<SpriteRenderer>().sprite = weaponSelected.imageWeapon;
 
     }
 
