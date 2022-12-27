@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 89
+  controlID: 21
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 90
+  controlID: 77
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 91
+  controlID: 50
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -382,21 +382,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/prefabs
+    - Assets/ScriptableObjects
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/prefabs
+  - Assets/ScriptableObjects
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\feder\Desktop\LANPARTY\DaGame\LanParty
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 13}
-    m_SelectedIDs: a8580000
-    m_LastClickedID: 22696
+    m_SelectedIDs: fe580000
+    m_LastClickedID: 22782
     m_ExpandedIDs: 000000009a58000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -553,9 +553,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: d4560000
       m_LastClickedID: 0
-      m_ExpandedIDs: 28fbffff565300000454000046550000ba55000068560000
+      m_ExpandedIDs: 28fbffff5653000090530000a2530000f2530000045400002a54000048540000325500004655000068560000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -826,9 +826,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.94011694, y: 10.319013, z: -10.002419}
+    m_Target: {x: -0.29443717, y: -1.1154284, z: -10.033727}
     speed: 2
-    m_Value: {x: 0.94011694, y: 10.319013, z: -10.002419}
+    m_Value: {x: -0.29443717, y: -1.1154284, z: -10.033727}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 31
@@ -879,9 +879,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.631161
+    m_Target: 7.028065
     speed: 2
-    m_Value: 3.631161
+    m_Value: 7.028065
   m_Ortho:
     m_Target: 1
     speed: 2
