@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        primaryGear.GetComponent<UnityEngine.UI.Image>().sprite = weaponSelected.imageWeapon;
         if(Input.GetKeyUp(KeyCode.I)){
             inventory.SetActive(!inventory.activeSelf);
         }
