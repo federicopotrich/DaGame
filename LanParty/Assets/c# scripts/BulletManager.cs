@@ -7,6 +7,10 @@ public class BulletManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.transform.Translate(transform.up);
+        this.gameObject.transform.Translate(transform.up*Time.deltaTime);
+    }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Destroy(this.gameObject);
     }
 }
