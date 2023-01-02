@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameManager gm;
     public GameObject bullet;
     public Transform mouth;
+    public bool isDistanceWeapon;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,24 +46,24 @@ public class PlayerController : MonoBehaviour
             canvasGame.SetActive(!canvasGame.activeSelf);
         }
 
+        if(isDistanceWeapon)
+            if(Input.GetMouseButtonUp(0) && !gm.Shop.gameObject.activeSelf && !gm.inventory.gameObject.activeSelf){
+                Transform target = mouth.transform;
+                Vector3 mouse_pos;
+                mouse_pos = Input.mousePosition;
+                Vector3 object_pos;
+                float angle;
 
-        if(Input.GetMouseButtonUp(0) && !gm.Shop.gameObject.activeSelf && !gm.inventory.gameObject.activeSelf){
-            Transform target = mouth.transform;
-            Vector3 mouse_pos;
-            mouse_pos = Input.mousePosition;
-            Vector3 object_pos;
-            float angle;
+                mouse_pos = Input.mousePosition;
+                object_pos = Camera.main.WorldToScreenPoint(target.position);
+                mouse_pos.x = mouse_pos.x - object_pos.x;
+                mouse_pos.y = mouse_pos.y - object_pos.y;
+                angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
+                //transform.rotation = Quaternion.Euler(0, 0, angle);
 
-            mouse_pos = Input.mousePosition;
-            object_pos = Camera.main.WorldToScreenPoint(target.position);
-            mouse_pos.x = mouse_pos.x - object_pos.x;
-            mouse_pos.y = mouse_pos.y - object_pos.y;
-            angle = Mathf.Atan2(mouse_pos.y, mouse_pos.x) * Mathf.Rad2Deg;
-            //transform.rotation = Quaternion.Euler(0, 0, angle);
-
-            GameObject bull = GameObject.Instantiate(bullet, /*Camera.main.WorldToViewportPoint*/(mouth.position), Quaternion.Euler(0, 0, angle));
-            bull.transform.SetParent(mouth.transform);
-        }
+                GameObject bull = GameObject.Instantiate(bullet, /*Camera.main.WorldToViewportPoint*/(mouth.position), Quaternion.Euler(0, 0, angle));
+                bull.transform.SetParent(mouth.transform);
+            }
         
     }
 
