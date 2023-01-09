@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public Transform mouth;
     public bool isDistanceWeapon;
+
+    public GameObject tpButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +74,25 @@ public class PlayerController : MonoBehaviour
                 bull.transform.SetParent(mouth.transform);
             }
         
+    }
+
+    void OnTriggerEnter2D(Collider2D collisionDetected){
+        //Debug.Log(collisionDetected.gameObject.name);
+
+        //Debug.Log(tpButton);
+    
+        if(collisionDetected.gameObject.name == "portaEntrata" ){
+            tpButton.SetActive(true);
+        }
+    }
+    void OnTriggerExit2D(Collider2D collisionDetected){
+        //Debug.Log(collisionDetected.gameObject.name);
+
+        //Debug.Log(tpButton);
+    
+        if(collisionDetected.gameObject.name == "portaEntrata" ){
+            tpButton.SetActive(false);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collisionDetected){
