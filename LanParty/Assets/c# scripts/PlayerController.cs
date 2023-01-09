@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public Transform mouth;
     public bool isDistanceWeapon;
-
     public GameObject tpButton;
+    public bool isSqualificato;
 
     // Start is called before the first frame update
     void Start()
