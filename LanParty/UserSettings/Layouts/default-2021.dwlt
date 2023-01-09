@@ -19,7 +19,11 @@ MonoBehaviour:
     width: 1206
     height: 715
   m_ShowMode: 4
+<<<<<<< HEAD
+  m_Title: 
+=======
   m_Title:
+>>>>>>> e522d24e51d2776e1a8532771528315ac77a23b7
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -174,6 +178,10 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars: []
+<<<<<<< HEAD
+  m_MainToolbar: {fileID: 18}
+=======
+>>>>>>> e522d24e51d2776e1a8532771528315ac77a23b7
   m_LastLoadedLayoutName: Default
 --- !u!114 &8
 MonoBehaviour:
@@ -256,8 +264,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
+  m_Name: 
+  m_EditorClassIdentifier: 
+=======
   m_Name:
   m_EditorClassIdentifier:
+>>>>>>> e522d24e51d2776e1a8532771528315ac77a23b7
   m_Children: []
   m_Position:
     serializedVersion: 2
@@ -442,7 +455,11 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
+<<<<<<< HEAD
+  m_AssetGUID: 
+=======
   m_AssetGUID:
+>>>>>>> e522d24e51d2776e1a8532771528315ac77a23b7
   m_InstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -475,7 +492,11 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+      m_SelectedIDs: 
+=======
       m_SelectedIDs:
+>>>>>>> e522d24e51d2776e1a8532771528315ac77a23b7
       m_LastClickedID: 0
       m_ExpandedIDs: 42fbffff
       m_RenameOverlay:
@@ -494,7 +515,11 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 0}
+<<<<<<< HEAD
+      m_SearchString: 
+=======
       m_SearchString:
+>>>>>>> e522d24e51d2776e1a8532771528315ac77a23b7
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
     m_LockTracker:
@@ -730,4 +755,20 @@ MonoBehaviour:
     width: 920
     height: 250
   m_ViewDataDictionary: {fileID: 0}
+<<<<<<< HEAD
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13963, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DontSaveToLayout: 0
+=======
 
+>>>>>>> e522d24e51d2776e1a8532771528315ac77a23b7
