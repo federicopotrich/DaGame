@@ -5,10 +5,10 @@ using UnityEngine;
 public class Squalifica : MonoBehaviour
 {
     
-    void Start(foo)
+    void Start()
     {
         
-        foo = PlayerPrefs.GetInt("foo")==1?true:false;
+        string foo = PlayerPrefs.GetInt("foo")==1?true:false;
 
         this.gameObject.SetActive(!foo);
     }

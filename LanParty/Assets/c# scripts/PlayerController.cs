@@ -26,6 +26,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isSqualificato){
+            PlayerPrefs.setInt("foo", 1);
+            UnityEngine.SceneManagement().SceneManager.LoadScene("MainMenu");
+        }
+
         float x = 0;
         float y = 0;
         if(Input.GetKey(KeyCode.A) != Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) != Input.GetKey(KeyCode.RightArrow)){
@@ -118,4 +123,10 @@ public class PlayerController : MonoBehaviour
             gm.generateQuestion(collisionDetected.gameObject.transform.parent.name);
         }
     }
+
+
+    /*SICURAMENTE ZONA PER ADMIN OwO*/
+    public void squalifica(){
+        isSqualificato = true;
+    } 
 }
