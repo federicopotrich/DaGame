@@ -27,8 +27,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if(isSqualificato){
-            PlayerPrefs.setInt("foo", 1);
-            UnityEngine.SceneManagement().SceneManager.LoadScene("MainMenu");
+            PlayerPrefs.SetInt("foo", 1);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
         }
 
         float x = 0;
