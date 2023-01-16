@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public Transform mouth;
     public bool isDistanceWeapon;
     public GameObject tpButton;
+    public GameObject shopButton;
     public bool isSqualificato;
 
     // Start is called before the first frame update
@@ -88,6 +89,8 @@ public class PlayerController : MonoBehaviour
     
         if(collisionDetected.gameObject.name == "portaEntrata" ){
             tpButton.SetActive(true);
+        }else if(collisionDetected.gameObject.name == "banconeUp" ){
+            shopButton.SetActive(true);
         }
     }
     void OnTriggerExit2D(Collider2D collisionDetected){
@@ -97,6 +100,8 @@ public class PlayerController : MonoBehaviour
     
         if(collisionDetected.gameObject.name == "portaEntrata" ){
             tpButton.SetActive(false);
+        }else if(collisionDetected.gameObject.name == "banconeUp" ){
+            shopButton.SetActive(false);
         }
     }
 
