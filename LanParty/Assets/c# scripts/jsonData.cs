@@ -6,7 +6,8 @@ using System.IO;
 
 public class jsonData : MonoBehaviour
 {
-    public string jsonDataString;
+    private string jsonDataString;
+    public quest [] arrayData;
 
     [System.Serializable]
     public class dataClass{
@@ -22,14 +23,17 @@ public class jsonData : MonoBehaviour
     {
 
         jsonDataString = File.ReadAllText(Application.dataPath + "/json/storia.json");
-       
         dataClass d = JsonConvert.DeserializeObject<dataClass>(jsonDataString);
-        
-    
-        foreach (var item in d.data)
+        arrayData = d.data;
+        foreach (var item in arrayData)
         {
-            Debug.Log(((quest)item).anno);
+            Debug.Log(item.id);
+            Debug.Log(item.immagine);
+            Debug.Log(item.nome);
+            Debug.Log(item.anno);
+            Debug.Log("_____________");
         }
+        
         
     }
     void Update(){
