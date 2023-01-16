@@ -7,8 +7,12 @@ public class Squalifica : MonoBehaviour
     
     void Start()
     {
-        
-        string foo = PlayerPrefs.GetInt("foo")==1?true:false;
+        bool foo;
+        if(PlayerPrefs.GetInt("foo") == 1){
+            foo = true;
+        }else{
+            foo = false;
+        }
 
         this.gameObject.SetActive(!foo);
     }
