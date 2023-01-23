@@ -10,6 +10,7 @@ TagManager:
   - Porta
   - Weapon
   - enemy
+  - DataStoria
   layers:
   - Default
   - TransparentFX
