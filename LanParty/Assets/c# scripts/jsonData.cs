@@ -25,14 +25,13 @@ public class jsonData : MonoBehaviour
         jsonDataString = File.ReadAllText(Application.dataPath + "/json/storia.json");
         dataClass d = JsonConvert.DeserializeObject<dataClass>(jsonDataString);
         arrayData = d.data;
-        foreach (var item in arrayData)
+        /*foreach (var item in arrayData)
         {
             Debug.Log(item.id);
             Debug.Log(item.immagine);
             Debug.Log(item.nome);
             Debug.Log(item.anno);
-            Debug.Log("_____________");
-        }
+        }*/
         
         
     }

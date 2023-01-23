@@ -103,7 +103,23 @@ public class GameManager : MonoBehaviour
                 Debug.Log("sei entrato nella classe di: IT");
             break;
             case "Storia":
-                Debug.Log("sei entrato nella classe di: ST");
+                //Debug.Log("sei entrato nella classe di: ST");
+                int nRandomico = Random.Range(0, GameObject.Find("JsonStoria").GetComponent<jsonData>().arrayData.Length);
+
+                Debug.Log(GameObject.Find("JsonStoria").GetComponent<jsonData>().arrayData[nRandomico].id);
+
+                GameObject g = new GameObject("DataStoria");
+
+                g.AddComponent<storiaData>();
+                g.GetComponent<storiaData>().id = GameObject.Find("JsonStoria").GetComponent<jsonData>().arrayData[nRandomico].id;
+                g.GetComponent<storiaData>().nome = GameObject.Find("JsonStoria").GetComponent<jsonData>().arrayData[nRandomico].nome;
+                g.GetComponent<storiaData>().anno = GameObject.Find("JsonStoria").GetComponent<jsonData>().arrayData[nRandomico].anno;
+                g.GetComponent<storiaData>().immagine = GameObject.Find("JsonStoria").GetComponent<jsonData>().arrayData[nRandomico].immagine;
+                
+                DontDestroyOnLoad(g);
+
+                UnityEngine.SceneManagement.SceneManager.LoadScene("StoriaScene");
+
             break;
             case "Geografia":
                 Debug.Log("sei entrato nella classe di: GE");
@@ -128,4 +144,11 @@ public class GameManager : MonoBehaviour
             break;
         }
     }
+}
+public class storiaData : MonoBehaviour
+{
+    public int id;
+    public string immagine;
+    public string nome;
+    public int anno;
 }
