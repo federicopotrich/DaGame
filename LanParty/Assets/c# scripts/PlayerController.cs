@@ -123,6 +123,7 @@ public class PlayerController : MonoBehaviour
                 this.transform.position = new Vector3(collisionDetected.gameObject.transform.position.x-10, collisionDetected.gameObject.transform.position.y, 0);
 
         }
+        
         if(collisionDetected.gameObject.tag == "Porta"){
             //Debug.Log(collisionDetected.gameObject.transform.parent);
             gm.generateQuestion(collisionDetected.gameObject.transform.parent.name);

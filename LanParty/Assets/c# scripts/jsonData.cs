@@ -1,27 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json;
+using System.IO;
 
 public class jsonData : MonoBehaviour
 {
-    public TextAsset textJson;
+    private string jsonDataString;
+    public quest [] arrayData;
 
     [System.Serializable]
-    public class data{
+    public class dataClass{
+        public quest[] data;
+    }
+    public class quest{
         public int id;
         public string immagine;
-        public string anno;
         public string nome;
+        public int anno;
     }
-
-    [System.Serializable]
-    public class storiaDataArray{
-        public data [] dataArr;
-    }
-    public storiaDataArray myList =  new storiaDataArray();
     void Start()
     {
-        myList = JsonUtility.FromJson<storiaDataArray>(textJson.text);
+
+        jsonDataString = File.ReadAllText(Application.dataPath + "/json/storia.json");
+        dataClass d = JsonConvert.DeserializeObject<dataClass>(jsonDataString);
+        arrayData = d.data;
+        /*foreach (var item in arrayData)
+        {
+            Debug.Log(item.id);
+            Debug.Log(item.immagine);
+            Debug.Log(item.nome);
+            Debug.Log(item.anno);
+        }*/
+        
+        
     }
     void Update(){
         

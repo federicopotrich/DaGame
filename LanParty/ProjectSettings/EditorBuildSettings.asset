@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PalestraScene.unity
     guid: 3ad822ffab461dd4ca70d89837129480
+  - enabled: 1
+    path: Assets/Scenes/StoriaScene.unity
+    guid: 6423070846d242547bf072e271700b08
   m_configObjects: {}
