@@ -17,10 +17,10 @@ public class StoriaGameManager : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(quesiti[index].GetComponent<storiaData>().immagine);
-
-        GameObject.Find("ImageStoria").GetComponent<UnityEngine.UI.Image>().sprite = Resources.Load<Sprite>(quesiti[index].GetComponent<storiaData>().immagine);
-
+        string replacedString = quesiti[index].GetComponent<storiaData>().immagine.Replace(".png", "");
+        replacedString = replacedString.Replace(".jpg", "");
+        GameObject.Find("ImageStoria").GetComponent<UnityEngine.UI.Image>().sprite = Resources.Load<Sprite>(replacedString);
+        
         if(quesitiRisolti[2] != -1){
             StartCoroutine("tmp");
         }
