@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public GameObject tpButton;
     public GameObject shopButton;
     public bool isSqualificato;
+    public ShopManager shopManager;
 
     // Start is called before the first frame update
     void Start()
@@ -57,9 +58,9 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(x, y, 0);
         transform.Translate(movement * speed * Time.deltaTime);
 
-        if(Input.GetKeyUp(KeyCode.P)){
-            canvasGame.SetActive(!canvasGame.activeSelf);
-        }
+        // if(Input.GetKeyUp(KeyCode.P)){
+        //     canvasGame.SetActive(!canvasGame.activeSelf);
+        // }
 
         if(isDistanceWeapon)
             if(Input.GetMouseButtonUp(0) && !gm.Shop.gameObject.activeSelf && !gm.inventory.gameObject.activeSelf){
@@ -89,9 +90,17 @@ public class PlayerController : MonoBehaviour
     
         if(collisionDetected.gameObject.name == "portaEntrata" ){
             tpButton.SetActive(true);
-        }else if(collisionDetected.gameObject.name == "banconeUp" ){
+        }else if(collisionDetected.gameObject.name == "banconeArmature" ){
             shopButton.SetActive(true);
+            shopManager.idShopSeller = 2;
+        }else if(collisionDetected.gameObject.name == "banconeArmi" ){
+            shopButton.SetActive(true);
+            shopManager.idShopSeller = 1;
+        }else if(collisionDetected.gameObject.name == "banconePozioni" ){
+            shopButton.SetActive(true);
+            shopManager.idShopSeller = 0;
         }
+
     }
     void OnTriggerExit2D(Collider2D collisionDetected){
         //Debug.Log(collisionDetected.gameObject.name);
@@ -100,8 +109,9 @@ public class PlayerController : MonoBehaviour
     
         if(collisionDetected.gameObject.name == "portaEntrata" ){
             tpButton.SetActive(false);
-        }else if(collisionDetected.gameObject.name == "banconeUp" ){
+        }else if(collisionDetected.gameObject.name.Contains("bancone") ){
             shopButton.SetActive(false);
+            canvasGame.SetActive(false);
         }
     }
 
