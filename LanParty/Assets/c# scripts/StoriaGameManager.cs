@@ -11,29 +11,31 @@ public class StoriaGameManager : MonoBehaviour
     bool b = true;
     void Start()
     {
+        b = true;
         index = 0;
         quesiti = GameObject.FindGameObjectsWithTag("DataStoria");
     }
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(index);
         if(index <=2){
             GameObject.Find("TestoAnno").GetComponent<TMPro.TextMeshProUGUI>().text = GameObject.Find("Slider").GetComponent<UnityEngine.UI.Slider>().value+" DC";
             string replacedString = quesiti[index].GetComponent<storiaData>().immagine.Replace(".png", "");
             replacedString = replacedString.Replace(".jpg", "");
             GameObject.Find("ImageStoria").GetComponent<UnityEngine.UI.Image>().sprite = Resources.Load<Sprite>(replacedString);
-
-            if(quesitiRisolti[2] != -1 && b){
-                b = false;
+            
+            if(index == 3 && b){
+                Debug.Log("ciao");
                 UnityEngine.SceneManagement.SceneManager.LoadScene("GameSchoolScene");
+                b=false;
             }
-
             Debug.Log(quesiti[index].GetComponent<storiaData>().anno);
-            Debug.Log(quesitiRisolti[2]);
         }
     }
     void tmp(){
         GameObject.Find("SceneManager").GetComponent<SceneManagerScript>().changeScene("GameSchoolScene");
+        CancelInvoke();
     }
     public void checkAnswer(){
         if(index <= 2){
