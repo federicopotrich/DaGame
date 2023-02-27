@@ -89,9 +89,14 @@ public class PlayerController : MonoBehaviour
     
         if(collisionDetected.gameObject.name == "portaEntrata" ){
             tpButton.SetActive(true);
-        }else if(collisionDetected.gameObject.name == "banconeUp" ){
+        }else if(collisionDetected.gameObject.name == "banconeArmature" ){
+            shopButton.SetActive(true);
+        }else if(collisionDetected.gameObject.name == "banconeArmi" ){
+            shopButton.SetActive(true);
+        }else if(collisionDetected.gameObject.name == "banconePozioni" ){
             shopButton.SetActive(true);
         }
+
     }
     void OnTriggerExit2D(Collider2D collisionDetected){
         //Debug.Log(collisionDetected.gameObject.name);
@@ -100,7 +105,7 @@ public class PlayerController : MonoBehaviour
     
         if(collisionDetected.gameObject.name == "portaEntrata" ){
             tpButton.SetActive(false);
-        }else if(collisionDetected.gameObject.name == "banconeUp" ){
+        }else if(collisionDetected.gameObject.name.Contains("bancone") ){
             shopButton.SetActive(false);
         }
     }
