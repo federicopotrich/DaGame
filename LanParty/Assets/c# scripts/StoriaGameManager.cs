@@ -8,6 +8,7 @@ public class StoriaGameManager : MonoBehaviour
     public int [] quesitiRisolti = {-1, -1, -1}; // -1 = quesito non svolto | 0 = quesito errato | 1 = quesito corretto
     // Start is called before the first frame update
     int index = 0;
+    bool b = true;
     void Start()
     {
         index = 0;
@@ -16,20 +17,32 @@ public class StoriaGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(index <=2){
+            GameObject.Find("TestoAnno").GetComponent<TMPro.TextMeshProUGUI>().text = GameObject.Find("Slider").GetComponent<UnityEngine.UI.Slider>().value+" DC";
+            string replacedString = quesiti[index].GetComponent<storiaData>().immagine.Replace(".png", "");
+            replacedString = replacedString.Replace(".jpg", "");
+            GameObject.Find("ImageStoria").GetComponent<UnityEngine.UI.Image>().sprite = Resources.Load<Sprite>(replacedString);
 
-        string replacedString = quesiti[index].GetComponent<storiaData>().immagine.Replace(".png", "");
-        replacedString = replacedString.Replace(".jpg", "");
-        GameObject.Find("ImageStoria").GetComponent<UnityEngine.UI.Image>().sprite = Resources.Load<Sprite>(replacedString);
-        
-        if(quesitiRisolti[2] != -1){
-            StartCoroutine("tmp");
+            if(quesitiRisolti[2] != -1 && b){
+                b = false;
+                UnityEngine.SceneManagement.SceneManager.LoadScene("GameSchoolScene");
+            }
+
+            Debug.Log(quesiti[index].GetComponent<storiaData>().anno);
+            Debug.Log(quesitiRisolti[2]);
         }
     }
-    IEnumerator tmp(){
-        yield return new WaitForSeconds(2);
-        UnityEngine.SceneManagement.SceneManager.LoadScene("GameSchoolScene");
+    void tmp(){
+        GameObject.Find("SceneManager").GetComponent<SceneManagerScript>().changeScene("GameSchoolScene");
     }
-    void checkAnswer(){
-
+    public void checkAnswer(){
+        if(index <= 2){
+            if(quesiti[index].GetComponent<storiaData>().anno == GameObject.Find("Slider").GetComponent<UnityEngine.UI.Slider>().value){
+                quesitiRisolti[index] = 1;
+            }else{
+                quesitiRisolti[index] = 0;
+            }
+            index++;
+        }
     }
 }
