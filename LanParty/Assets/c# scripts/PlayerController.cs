@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public GameObject shopButton;
     public bool isSqualificato;
     public ShopManager shopManager;
+    public int coin;
 
     // Start is called before the first frame update
     void Start()
