@@ -26,6 +26,13 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        if(GameObject.FindGameObjectsWithTag("DataStoria").Length > 0){
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("DataStoria").Length; i++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("DataStoria")[i]);
+            }
+        }
+
         for (int i = 0; i < armi.Length; i++)
         {
             GameObject gInstantiated = GameObject.Instantiate(slotShop, new Vector3(), Quaternion.identity);
