@@ -119,19 +119,22 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collisionDetected){
         if(collisionDetected.gameObject.tag == "scale"){
             piani[piano].SetActive(false);
-
+            
             if(collisionDetected.gameObject.name=="up"){
                 piani[piano+1].SetActive(true);
+                //this.transform.position = collisionDetected.gameObject.transform.Find("SpawnPoint").transform.position;
+                this.transform.position = piani[piano+1].gameObject.transform.Find(collisionDetected.gameObject.transform.parent.gameObject.name).transform.Find("down").transform.Find("SpawnPoint").transform.position;
                 piano++;
             }else if(collisionDetected.gameObject.name=="down"){
                 piani[piano-1].SetActive(true);
+                if(piano-1 == 0){
+                    this.transform.position = piani[piano-1].gameObject.transform.Find(collisionDetected.gameObject.transform.parent.gameObject.name).transform.Find("up").transform.Find("SpawnPoint").transform.position;
+                }else{
+                    this.transform.position = piani[piano-1].gameObject.transform.Find(collisionDetected.gameObject.transform.parent.gameObject.name).transform.Find("down").transform.Find("SpawnPoint").transform.position;
+                }
                 piano--;
             }
 
-            if(collisionDetected.gameObject.transform.parent.gameObject.tag == "sinistra")
-                this.transform.position = new Vector3(collisionDetected.gameObject.transform.position.x+10, collisionDetected.gameObject.transform.position.y, 0);
-            else
-                this.transform.position = new Vector3(collisionDetected.gameObject.transform.position.x-10, collisionDetected.gameObject.transform.position.y, 0);
 
         }
         
