@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public GameObject primaryGear;
     public GameObject secondaryGear;
 
+    public TMPro.TextMeshProUGUI textFloor;
     void Start()
     {
         if(GameObject.FindGameObjectsWithTag("DataStoria").Length > 0){
@@ -104,6 +105,27 @@ public class GameManager : MonoBehaviour
         }
 
         placeForWeapon.GetComponent<SpriteRenderer>().sprite = weaponSelected.imageWeapon;
+
+
+
+        switch (GameObject.Find("Player").GetComponent<PlayerController>().piano)
+        {
+            case 0:
+                textFloor.text = "Piano Terra";
+                break;
+            case 1:
+                textFloor.text = "Primo Piano";
+                break;
+            case 2:
+                textFloor.text = "Secondo Piano";
+                break;
+            case 3:
+                textFloor.text = "Terzo Piano";
+                break;
+            case 4:
+                textFloor.text = "Quarto Piano";
+                break;
+        }
 
     }
 

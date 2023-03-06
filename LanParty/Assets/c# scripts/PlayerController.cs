@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    int piano = 0;
+    public int piano = 0;
     public GameObject [] piani;
     public float speed;
 
@@ -23,9 +23,13 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine("tmp");
     }
-
+    IEnumerator tmp(){
+        gm.textFloor.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1.75f);
+        gm.textFloor.gameObject.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -134,7 +138,7 @@ public class PlayerController : MonoBehaviour
                 }
                 piano--;
             }
-
+            StartCoroutine("tmp");
 
         }
         
