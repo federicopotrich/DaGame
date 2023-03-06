@@ -33,6 +33,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameObject.Find("TextGold")){
+            GameObject.Find("TextGold").GetComponent<TMPro.TextMeshProUGUI>().text = "" + coin;
+        }
+
         if(isSqualificato){
             PlayerPrefs.SetInt("foo", 1);
             UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
