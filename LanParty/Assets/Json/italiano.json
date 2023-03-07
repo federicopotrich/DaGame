@@ -1,0 +1,84 @@
+{
+    "data":[
+        {
+            "poeta": "Dante Alighieri",
+            "emoji": "🔥",
+            "opzioni": [
+                "Dante Alighieri",
+                "Petrarca",
+                "Leopardi",
+                "Boccaccio"
+            ]
+        },
+        {
+            "poeta": "Francesco Petrarca",
+            "emoji": "🌹",
+            "opzioni": [
+                "Francesco Petrarca",
+                "Dante Alighieri",
+                "Giacomo Leopardi",
+                "Giovanni Boccaccio"
+            ]
+        },
+        {
+            "poeta": "Giacomo Leopardi",
+            "emoji": "💭",
+            "opzioni": [
+                "Giacomo Leopardi",
+                "Alessandro Manzoni",
+                "Ugo Foscolo",
+                "Francesco Petrarca"
+            ]
+        },
+        {
+            "poeta": "Ugo Foscolo",
+            "emoji": "🏛️",
+            "opzioni": [
+                "Ugo Foscolo",
+                "Giosuè Carducci",
+                "Giacomo Leopardi",
+                "Dante Alighieri"
+            ]
+        },
+        {
+            "poeta": "Alessandro Manzoni",
+            "emoji": "📖",
+            "opzioni": [
+                "Alessandro Manzoni",
+                "Gabriele D'Annunzio",
+                "Pier Paolo Pasolini",
+                "Umberto Saba"
+            ]
+        },
+        {
+            "poeta": "Luigi Pirandello",
+            "emoji": "🎭",
+            "opzioni": [
+                "Torquato Tasso",
+                "Giovanni Pascoli",
+                "Luigi Pirandello",
+                "Giuseppe Ungaretti"
+            ]
+        },
+        {
+            "poeta": "Giovanni Pascoli",
+            "emoji": "🤴",
+            "opzioni": [
+                "Giovanni Pascoli",
+                "Eugenio Montale",
+                "Salvatore Quasimodo",
+                "Umberto Saba"
+            ]
+        },
+        {
+            "poeta": "Eugenio Montale",
+            "emoji": "🌊",
+            "opzioni": [
+                "Eugenio Montale",
+                "Giuseppe Ungaretti",
+                "Pier Paolo Pasolini",
+                "Giovanni Pascoli"
+            ]
+        }
+    ]
+}
