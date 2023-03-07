@@ -33,6 +33,12 @@ public class GameManager : MonoBehaviour
                 Destroy(GameObject.FindGameObjectsWithTag("DataStoria")[i]);
             }
         }
+        if(GameObject.FindGameObjectsWithTag("DataItaliano").Length > 0){
+            for (int i = 0; i < GameObject.FindGameObjectsWithTag("DataItaliano").Length; i++)
+            {
+                Destroy(GameObject.FindGameObjectsWithTag("DataItaliano")[i]);
+            }
+        }
 
         for (int i = 0; i < armi.Length; i++)
         {
@@ -134,7 +140,21 @@ public class GameManager : MonoBehaviour
         switch (typeQuestion)
         {
             case "Italiano":
-                Debug.Log("sei entrato nella classe di: IT");
+                List <int> listaItaliano = GenerateRandom(4, 0, GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData.Length);
+                for (int i = 0; i < listaItaliano.ToArray().Length; i++)
+                {
+                    GameObject g = new GameObject("DataItaliano"+i);
+
+                    g.tag = "DataItaliano";
+
+                    g.AddComponent<italianoData>();
+                    g.GetComponent<italianoData>().poeta = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].poeta;
+                    g.GetComponent<italianoData>().emoji = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].emoji;
+                    g.GetComponent<italianoData>().opzioni = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].opzioni;
+                    DontDestroyOnLoad(g);
+                }
+                
+                UnityEngine.SceneManagement.SceneManager.LoadScene("ItalianoScene");
                 break;
             case "Storia":
                 //Debug.Log("sei entrato nella classe di: ST");
@@ -209,4 +229,11 @@ public class storiaData : MonoBehaviour
     public string immagine;
     public string nome;
     public int anno;
+}
+
+public class italianoData : MonoBehaviour
+{
+    public string poeta;
+    public string emoji;
+    public string [] opzioni;
 }
