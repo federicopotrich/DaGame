@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: c12f1a8b6dcbb3f40b3d0894fdcda995
-=======
-<<<<<<< HEAD
-guid: 635bf54c221cb844298c4b9620195537
-=======
-guid: 08e10205fe443b24b8182e77493c3ce9
->>>>>>> 2441d7c22cfe85d06aaa3a0f69f2760d082b14a7
->>>>>>> 0ce1865cbbcd059c15ad9b3325ebcef8fce36fd4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -41,15 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<< HEAD
-    filterMode: 1
-=======
-<<<<<<< HEAD
-    filterMode: 1
-=======
     filterMode: 0
->>>>>>> 2441d7c22cfe85d06aaa3a0f69f2760d082b14a7
->>>>>>> 0ce1865cbbcd059c15ad9b3325ebcef8fce36fd4
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -58,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -86,15 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
-    textureCompression: 1
-=======
-<<<<<<< HEAD
-    textureCompression: 1
-=======
     textureCompression: 0
->>>>>>> 2441d7c22cfe85d06aaa3a0f69f2760d082b14a7
->>>>>>> 0ce1865cbbcd059c15ad9b3325ebcef8fce36fd4
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,8 +101,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-=======
   - serializedVersion: 3
     buildTarget: Android
     maxTextureSize: 2048
@@ -163,10 +137,51 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
->>>>>>> 0ce1865cbbcd059c15ad9b3325ebcef8fce36fd4
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Antennorg-LordOfFirestarters_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f4fbcb7573b3c4c95d591771c319ea
+      internalID: 1848727808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Antennorg-LordOfFirestarters_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bba5c52975a0364fa8892276dcca5ff
+      internalID: -60149709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -177,7 +192,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Antennorg-LordOfFirestarters_1: -60149709
+      Antennorg-LordOfFirestarters_0: 1848727808
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
