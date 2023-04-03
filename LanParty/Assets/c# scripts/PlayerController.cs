@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator tmp(){
         yield return new WaitForSeconds(1.75f);
-        gm.textFloor.gameObject.SetActive(false);
     }
     // Update is called once per frame
     void Update()
