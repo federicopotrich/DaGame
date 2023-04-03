@@ -4,4 +4,5 @@ Moveset:
 - **LAZEEEER**
 - Spiiiiiin
 - punch
-- 
+- **Yeeet**
+- **IRA DEGLI DEI!**
