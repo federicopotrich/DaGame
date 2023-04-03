@@ -331,6 +331,22 @@ MonoBehaviour:
   - {fileID: 711416359}
   - {fileID: 1151081182}
   - {fileID: 697732981}
+  numbers:
+  - {fileID: -976640233, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: 1066605950, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: 1307577238, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: -274758646, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: -1043540044, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: -1291977930, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: 1892002779, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: 1847890579, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: 1200057557, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: -1379927771, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: -571579052, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: 1051181349, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: 1662136003, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: 455052101, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
+  - {fileID: 585422733, guid: f8dc3881543d77c42a54dc87605913b4, type: 3}
 --- !u!4 &111680940
 Transform:
   m_ObjectHideFlags: 0
