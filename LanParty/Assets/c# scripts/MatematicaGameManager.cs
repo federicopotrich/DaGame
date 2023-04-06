@@ -6,17 +6,21 @@ public class MatematicaGameManager : MonoBehaviour
 {
     public ArrayList matrix;
     public int[] row;
-
+    public int currentPosI = 2;
+    public int currentPosJ = 2;
     public int[,] bigTable = new int[5,5];
     public GameObject [] cells;
-
+    public int target;
+    public int currentValue;
+    public int points;
+    public bool substraction = false;
     public Sprite [] numbers;
     // Start is called before the first frame update
     void Start()
     {
-        int [,] matrix = nextBigTable();
-            
-        
+        int [,] matrix = nextBigTable(); 
+        currentValue = matrix[currentPosI,currentPosJ];
+        Debug.Log(target);
         
     }
 
@@ -50,6 +54,8 @@ public class MatematicaGameManager : MonoBehaviour
                 k++;
             }
         }
+        cells[12].GetComponent<UnityEngine.UI.Image>().sprite = numbers[bigTable[2, 2]+9];
+        target = Random.Range(0,25);
         return bigTable;
     }
 
@@ -59,8 +65,59 @@ public class MatematicaGameManager : MonoBehaviour
 
     }
 
-    public void eventMouseCellListener(){
-        
+    public void eventMouseCellListener(GameObject cella){
+        int currentCol = cella.GetComponent<cell>().col;
+        int currentRow = cella.GetComponent<cell>().row;
+        int value = cella.GetComponent<cell>().value;
+        Debug.Log(currentCol+" "+currentRow+" "+ value);
+        if(currentCol == currentPosI+1 || currentCol == currentPosI-1){
+            if(currentRow == currentPosJ){
+                currentPosI = currentCol;
+                currentPosJ = currentRow;
+                if(Input.GetMouseButtonDown(0)){
+                    currentValue += value;
+                    cella.GetComponent<UnityEngine.UI.Image>().sprite = numbers[value+9];
+                }
+                else{
+                    currentValue -= value;
+                    substraction = true;
+                    cella.GetComponent<UnityEngine.UI.Image>().sprite = numbers[value+4];
+                }
+                
+            }
+        }
+        if(currentCol == currentPosI){
+            if(currentRow == currentPosJ+1 || currentRow == currentPosJ-1){
+                currentPosI = currentCol;
+                currentPosJ = currentRow;
+                if(Input.GetMouseButtonDown(0)){
+                    currentValue += value;
+                    cella.GetComponent<UnityEngine.UI.Image>().sprite = numbers[value+9];
+                }
+                else{
+                    currentValue -= value;
+                    substraction = true;
+                    cella.GetComponent<UnityEngine.UI.Image>().sprite = numbers[value+4];
+                }
+            }
+        }
+    }
+
+    public void confirm(){
+        if(currentValue == target &&  (currentPosI == 0 || currentPosI == 4 || currentPosJ == 0 || currentPosJ == 4)){
+            points++;
+            resetTable();
+        }
+        else
+            resetTable();
+        Debug.Log(points);
+    }
+
+    public void resetTable(){
+        target = Random.Range(0,25);
+        currentPosI = 2;
+        currentPosJ = 2;
+        nextBigTable();
     }
 }
 
