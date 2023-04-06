@@ -17,7 +17,7 @@ public class Attacks : MonoBehaviour
             case 2:  Debug.Log("Punch Attack!"); yield return StartCoroutine(Punch()); break;
             case 3:  Debug.Log("Yeet Attack!"); break;
             case 4:  Debug.Log("IRA DEGLI DEI! Attack!"); break;
-            case 5:  Debug.Log("Stomp Attack!"); break;
+            case 5:  Debug.Log("Stomp Attack!"); yield return StartCoroutine(Stomp()); break;
 
             default: break;
         }
@@ -27,8 +27,16 @@ public class Attacks : MonoBehaviour
         Debug.Log("Punch!");
         yield return new WaitForSeconds(1f);
         bossAnim.SetBool("punch",true);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1f);
         bossAnim.SetBool("punch",false);
+    }
+
+    IEnumerator Stomp(){
+        Debug.Log("Stomp!");
+        yield return new WaitForSeconds(1f);
+        bossAnim.SetBool("stomp",true);
+        yield return new WaitForSeconds(1.5f);
+        bossAnim.SetBool("stomp",false);
     }
 
 }
