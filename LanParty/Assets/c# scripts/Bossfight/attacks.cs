@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attacks : MonoBehaviour
 {
     
-    // attacks = [laser, spin, punch, yeet, ira_degli_dei, stomp]
+    public GameObject punch, stomp;
     public Animator bossAnim;
 
     public IEnumerator call(int i){
@@ -24,19 +24,21 @@ public class Attacks : MonoBehaviour
     }
 
     IEnumerator Punch(){
-        Debug.Log("Punch!");
+        GameObject punchtmp = GameObject.Instantiate(punch,new Vector3(this.transform.position.x+5,this.transform.position.y-15,0),Quaternion.identity);
         yield return new WaitForSeconds(1f);
         bossAnim.SetBool("punch",true);
         yield return new WaitForSeconds(1f);
         bossAnim.SetBool("punch",false);
+        Destroy(punchtmp);
     }
 
     IEnumerator Stomp(){
-        Debug.Log("Stomp!");
+        GameObject stomptmp = GameObject.Instantiate(stomp,new Vector3(this.transform.position.x+5,this.transform.position.y-15,0),Quaternion.identity);
         yield return new WaitForSeconds(1f);
         bossAnim.SetBool("stomp",true);
         yield return new WaitForSeconds(1.5f);
         bossAnim.SetBool("stomp",false);
+        Destroy(stomptmp);
     }
 
 }

@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public ShopManager shopManager;
     public int coin;
 
+    public int hp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -106,7 +108,9 @@ public class PlayerController : MonoBehaviour
         }else if(collisionDetected.gameObject.name == "banconePozioni" ){
             shopButton.SetActive(true);
             shopManager.idShopSeller = 0;
-        }
+        }else if(collisionDetected.gameObject.tag=="Damage")
+            if(collisionDetected.gameObject.GetComponent<AttackScript>().active)
+                hp-=collisionDetected.gameObject.GetComponent<AttackScript>().dmg;
 
     }
     void OnTriggerExit2D(Collider2D collisionDetected){
