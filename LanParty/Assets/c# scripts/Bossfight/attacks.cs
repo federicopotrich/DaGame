@@ -5,7 +5,7 @@ using UnityEngine;
 public class Attacks : MonoBehaviour
 {
     
-    public GameObject punch, stomp, spin;
+    public GameObject punch, stomp, spin, idd;
     public Animator bossAnim;
 
     public IEnumerator call(int i){
@@ -16,7 +16,7 @@ public class Attacks : MonoBehaviour
             case 1:  Debug.Log("Laser Attack!"); break;
             case 2:  Debug.Log("Punch Attack!"); yield return StartCoroutine(Punch()); break;
             case 3:  Debug.Log("Yeet Attack!"); break;
-            case 4:  Debug.Log("IRA DEGLI DEI! Attack!"); break;
+            case 4:  Debug.Log("IRA DEGLI DEI! Attack!"); yield return StartCoroutine(IDD()); break;
             case 5:  Debug.Log("Stomp Attack!"); yield return StartCoroutine(Stomp()); break;
 
             default: break;
@@ -57,6 +57,15 @@ public class Attacks : MonoBehaviour
         Destroy(spintmp1);
         Destroy(spintmp2);
         Destroy(spintmp3);
+    }
+
+    IEnumerator IDD(){
+        GameObject iddtmp = GameObject.Instantiate(idd,new Vector3(this.transform.position.x+5,this.transform.position.y,0),Quaternion.identity);
+        bossAnim.SetBool("iraDegliDei",true);
+        yield return new WaitForSeconds(1.3f);
+        Destroy(iddtmp);
+        yield return new WaitForSeconds(0.2f);
+        bossAnim.SetBool("iraDegliDei",false);
     }
 
 }

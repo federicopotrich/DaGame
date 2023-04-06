@@ -51,10 +51,10 @@ public class bossController : MonoBehaviour
             yield return StartCoroutine(Move());   
         else{
             Debug.Log("attack or move");
-            int index = (int) Random.Range(1,20);
+            int index = (int) Random.Range(0,21);
             if(index%2==0){
-                index = (int) Random.Range(0,5);
-                yield return StartCoroutine(att.call(0));
+                index = (int) Random.Range(0,6);
+                yield return StartCoroutine(att.call(index));
                 StartCoroutine(ChangeBehaviour());
             }
             else

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3924820869097850825}
   - component: {fileID: 3924820869097850830}
+  - component: {fileID: 355965917303258338}
   m_Layer: 0
   m_Name: iraDegliDei
   m_TagString: Untagged
@@ -49,6 +50,20 @@ CircleCollider2D:
   m_Offset: {x: 1.3, y: 18.13}
   serializedVersion: 2
   m_Radius: 38
+--- !u!114 &355965917303258338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924820869097850831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961e51a0b17e84c40b9324bd6c714aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 10
+  active: 0
 --- !u!1 &3924820870193374877
 GameObject:
   m_ObjectHideFlags: 0
