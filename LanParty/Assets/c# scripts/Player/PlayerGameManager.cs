@@ -9,6 +9,8 @@ public class PlayerGameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        this.gameObject.AddComponent<PlayerInventory>();
+
         myStats = this.gameObject.AddComponent<Stats>();
         myStats.MaxHP = myStats.CurrentHP = 150;
         myStats.coins = 0;
@@ -23,7 +25,15 @@ public class PlayerGameManager : MonoBehaviour
     }
     void Update()
     {
-        
+        if(Input.GetKeyUp(KeyCode.P)){
+            this.gameObject.transform.Find("CanvasInventory").gameObject.SetActive(true);
+        }
+
+        if(this.gameObject.transform.Find("CanvasInventory").gameObject.activeSelf){
+            Time.timeScale = 0;
+        }else{
+            Time.timeScale = 1;
+        }
     }
     
     public class Stats : MonoBehaviour
@@ -51,5 +61,30 @@ public class PlayerGameManager : MonoBehaviour
                     break;
             }
         }
+    }
+}
+class PlayerInventory : MonoBehaviour
+{
+    public Item [,] inventoryItems = new Item[3,4];
+    // Start is called before the first frame update
+    void Start()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 4; j++)
+            {
+                inventoryItems[i,j] = null;
+            }
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    public class Item{
+        public string _name;
+        public string _type; 
     }
 }
