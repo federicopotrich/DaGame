@@ -15,6 +15,7 @@ public class PlayerReadyComponent : MonoBehaviour
     public void SetPlayerReady(){
         SetPlayerReadyServer();
     }
+    [ServerRpc(RequireOwnership=false)]
     private void SetPlayerReadyServer(ServerRpcParams serverRpcParams = default){
         playerReadyDictionary[serverRpcParams.Receive.SenderClientId] = true;
 
@@ -31,7 +32,5 @@ public class PlayerReadyComponent : MonoBehaviour
         {
             Loader.LoadNetwork(Loader.Scene.GameSchoolScene);
         }
-
     }
-
 }
