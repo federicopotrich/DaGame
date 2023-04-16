@@ -33,7 +33,7 @@ public class Attacks : MonoBehaviour
     }
 
     IEnumerator Stomp(){
-        GameObject stomptmp = GameObject.Instantiate(stomp,new Vector3(this.transform.position.x+5,this.transform.position.y+5,0),Quaternion.identity);
+        GameObject stomptmp = GameObject.Instantiate(stomp,new Vector3(this.transform.position.x+5,this.transform.position.y-5,0),Quaternion.identity);
         yield return new WaitForSeconds(1f);
         bossAnim.SetBool("stomp",true);
         yield return new WaitForSeconds(1.5f);
@@ -60,11 +60,13 @@ public class Attacks : MonoBehaviour
     }
 
     IEnumerator IDD(){
-        GameObject iddtmp = GameObject.Instantiate(idd,new Vector3(this.transform.position.x+5,this.transform.position.y,0),Quaternion.identity);
+        
         bossAnim.SetBool("iraDegliDei",true);
+        yield return new WaitForSeconds(0.5f);
+        GameObject iddtmp = GameObject.Instantiate(idd,new Vector3(this.transform.position.x+5,this.transform.position.y,0),Quaternion.identity);
         yield return new WaitForSeconds(1.3f);
         Destroy(iddtmp);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(1f);
         bossAnim.SetBool("iraDegliDei",false);
     }
 
