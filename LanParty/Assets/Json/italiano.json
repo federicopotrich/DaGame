@@ -1,18 +1,21 @@
 {
+    "_comment": "opere per livello facile ... citazioni per livello difficile",
     "data":[
         {
             "poeta": "Dante Alighieri",
-            "emoji": "🔥",
+            "opere": "La divina commedia", 
+            "citazioni": "Lasciate ogni spernaza o voi che entrate",
             "opzioni": [
                 "Dante Alighieri",
-                "Petrarca",
-                "Leopardi",
-                "Boccaccio"
+                "Francesco Petrarca",
+                "Giacomo Leopardi",
+                "Giovanni Boccaccio"
             ]
         },
         {
             "poeta": "Francesco Petrarca",
-            "emoji": "🌹",
+            "opere": "Il canzoniere",
+            "citazioni": "Un bel morir tutta la vita honora",
             "opzioni": [
                 "Francesco Petrarca",
                 "Dante Alighieri",
@@ -21,8 +24,20 @@
             ]
         },
         {
+            "poeta": "Gabriele D'Annunzio",
+            "opere": "La pioggia nel pineto",
+            "citazioni": "Taci",
+            "opzioni": [
+                "Francesco Petrarca",
+                "Dante Alighieri",
+                "Gabriele D'Annunzio",
+                "Ugo Foscolo"
+            ]
+        },
+        {
             "poeta": "Giacomo Leopardi",
-            "emoji": "💭",
+            "opere": "A Silvia",
+            "citazioni": "La felicità consiste nell'ignoranza del vero",
             "opzioni": [
                 "Giacomo Leopardi",
                 "Alessandro Manzoni",
@@ -32,7 +47,8 @@
         },
         {
             "poeta": "Ugo Foscolo",
-            "emoji": "🏛️",
+            "opere": "Le ultime lettere di Jacopo Ortis",
+            "citazioni": "Forse perché della fatal quïete tu sei l'imago a me sì cara vieni O sera!",
             "opzioni": [
                 "Ugo Foscolo",
                 "Giosuè Carducci",
@@ -42,7 +58,8 @@
         },
         {
             "poeta": "Alessandro Manzoni",
-            "emoji": "📖",
+            "opere": "I promessi sposi",
+            "citazioni": "Or bene, questo matrimonio non s’ha da fare, né domani, né mai",
             "opzioni": [
                 "Alessandro Manzoni",
                 "Gabriele D'Annunzio",
@@ -52,7 +69,8 @@
         },
         {
             "poeta": "Luigi Pirandello",
-            "emoji": "🎭",
+            "opere": "1, nessuno, 100000",
+            "citazioni": "Imparerai a tue spese che nel lungo tragitto della vita incontrerai tante maschere e pochi volti",
             "opzioni": [
                 "Torquato Tasso",
                 "Giovanni Pascoli",
@@ -62,7 +80,8 @@
         },
         {
             "poeta": "Giovanni Pascoli",
-            "emoji": "🤴",
+            "opere": "Il fanciullino",
+            "citazioni": "Piove sul bagnato: lagrime su sangue, e sangue su lagrime",
             "opzioni": [
                 "Giovanni Pascoli",
                 "Eugenio Montale",
@@ -72,12 +91,35 @@
         },
         {
             "poeta": "Eugenio Montale",
-            "emoji": "🌊",
+            "opere": "I limoni",
+            "citazioni": "Quando un giorno da un malchiuso portone tra gli alberi di una corte ci si mostrano i gialli dei limoni",
             "opzioni": [
                 "Eugenio Montale",
                 "Giuseppe Ungaretti",
                 "Pier Paolo Pasolini",
                 "Giovanni Pascoli"
+            ]
+        },
+        {
+            "poeta": "Umberto Saba",
+            "opere": "A mia moglie",
+            "citazioni": "Tu sei come una gravida giovenca (vacca)",
+            "opzioni": [
+                "Eugenio Montale",
+                "Giuseppe Ungaretti",
+                "Pier Paolo Pasolini",
+                "Umberto Saba"
+            ]
+        },
+        {
+            "poeta": "Giovanni Verga",
+            "opere": "I malavoglia",
+            "citazioni": "Chi fa credenza senza pegno, perde l'amico, la roba e l'ingegno",
+            "opzioni": [
+                "Giovanni Verga",
+                "Giuseppe Ungaretti",
+                "Pier Paolo Pasolini",
+                "Umberto Saba"
             ]
         }
     ]
