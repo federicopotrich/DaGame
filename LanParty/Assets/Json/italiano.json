@@ -1,126 +1,117 @@
 {
     "_comment": "opere per livello facile ... citazioni per livello difficile",
-    "data":[
+    "data": [
         {
             "poeta": "Dante Alighieri",
-            "opere": "La divina commedia", 
-            "citazioni": "Lasciate ogni spernaza o voi che entrate",
-            "opzioni": [
-                "Dante Alighieri",
-                "Francesco Petrarca",
-                "Giacomo Leopardi",
-                "Giovanni Boccaccio"
-            ]
+            "opere": [
+                "La divina commedia"
+            ],
+            "citazioni": "Lasciate ogni spernaza o voi che entrate"
         },
         {
             "poeta": "Francesco Petrarca",
-            "opere": "Il canzoniere",
-            "citazioni": "Un bel morir tutta la vita honora",
-            "opzioni": [
-                "Francesco Petrarca",
-                "Dante Alighieri",
-                "Giacomo Leopardi",
-                "Giovanni Boccaccio"
-            ]
+            "opere": [
+                "Il canzoniere"
+            ],
+            "citazioni": "Un bel morir tutta la vita honora"
         },
         {
             "poeta": "Gabriele D'Annunzio",
-            "opere": "La pioggia nel pineto",
-            "citazioni": "Taci",
-            "opzioni": [
-                "Francesco Petrarca",
-                "Dante Alighieri",
-                "Gabriele D'Annunzio",
-                "Ugo Foscolo"
-            ]
+            "opere": [
+                "La pioggia nel pineto"
+            ],
+            "citazioni": "Taci"
         },
         {
             "poeta": "Giacomo Leopardi",
-            "opere": "A Silvia",
-            "citazioni": "La felicità consiste nell'ignoranza del vero",
-            "opzioni": [
-                "Giacomo Leopardi",
-                "Alessandro Manzoni",
-                "Ugo Foscolo",
-                "Francesco Petrarca"
-            ]
+            "opere": [
+                "A Silvia"
+            ],
+            "citazioni": "La felicità consiste nell'ignoranza del vero"
         },
         {
             "poeta": "Ugo Foscolo",
-            "opere": "Le ultime lettere di Jacopo Ortis",
-            "citazioni": "Forse perché della fatal quïete tu sei l'imago a me sì cara vieni O sera!",
-            "opzioni": [
-                "Ugo Foscolo",
-                "Giosuè Carducci",
-                "Giacomo Leopardi",
-                "Dante Alighieri"
-            ]
+            "opere": [
+                "Le ultime lettere di Jacopo Ortis"
+            ],
+            "citazioni": "Forse perché della fatal quïete tu sei l'imago a me sì cara vieni O sera!"
         },
         {
             "poeta": "Alessandro Manzoni",
-            "opere": "I promessi sposi",
-            "citazioni": "Or bene, questo matrimonio non s’ha da fare, né domani, né mai",
-            "opzioni": [
-                "Alessandro Manzoni",
-                "Gabriele D'Annunzio",
-                "Pier Paolo Pasolini",
-                "Umberto Saba"
-            ]
+            "opere": [
+                "I promessi sposi"
+            ],
+            "citazioni": "Or bene, questo matrimonio non s’ha da fare, né domani, né mai"
         },
         {
             "poeta": "Luigi Pirandello",
-            "opere": "1, nessuno, 100000",
-            "citazioni": "Imparerai a tue spese che nel lungo tragitto della vita incontrerai tante maschere e pochi volti",
-            "opzioni": [
-                "Torquato Tasso",
-                "Giovanni Pascoli",
-                "Luigi Pirandello",
-                "Giuseppe Ungaretti"
-            ]
+            "opere": [
+                "uno, nessuno, 100000"
+            ],
+            "citazioni": "Imparerai a tue spese che nel lungo tragitto della vita incontrerai tante maschere e pochi volti"
         },
         {
             "poeta": "Giovanni Pascoli",
-            "opere": "Il fanciullino",
-            "citazioni": "Piove sul bagnato: lagrime su sangue, e sangue su lagrime",
-            "opzioni": [
-                "Giovanni Pascoli",
-                "Eugenio Montale",
-                "Salvatore Quasimodo",
-                "Umberto Saba"
-            ]
+            "opere": [
+                "Il fanciullino"
+            ],
+            "citazioni": "Piove sul bagnato: lagrime su sangue, e sangue su lagrime"
         },
         {
             "poeta": "Eugenio Montale",
-            "opere": "I limoni",
-            "citazioni": "Quando un giorno da un malchiuso portone tra gli alberi di una corte ci si mostrano i gialli dei limoni",
-            "opzioni": [
-                "Eugenio Montale",
-                "Giuseppe Ungaretti",
-                "Pier Paolo Pasolini",
-                "Giovanni Pascoli"
-            ]
+            "opere": [
+                "I limoni"
+            ],
+            "citazioni": "Quando un giorno da un malchiuso portone tra gli alberi di una corte ci si mostrano i gialli dei limoni"
         },
         {
             "poeta": "Umberto Saba",
-            "opere": "A mia moglie",
-            "citazioni": "Tu sei come una gravida giovenca (vacca)",
-            "opzioni": [
-                "Eugenio Montale",
-                "Giuseppe Ungaretti",
-                "Pier Paolo Pasolini",
-                "Umberto Saba"
-            ]
+            "opere": [
+                "A mia moglie",
+                "Ernesto"
+            ],
+            "citazioni": "Tu sei come una gravida giovenca (vacca)"
         },
         {
             "poeta": "Giovanni Verga",
-            "opere": "I malavoglia",
-            "citazioni": "Chi fa credenza senza pegno, perde l'amico, la roba e l'ingegno",
-            "opzioni": [
-                "Giovanni Verga",
-                "Giuseppe Ungaretti",
-                "Pier Paolo Pasolini",
-                "Umberto Saba"
-            ]
+            "opere": [
+                "I malavoglia",
+                "Rosso Malpelo",
+                "Mastro Don Gesualdo",
+                "Il ciclo dei vinti",
+                "Novelle Rusticane",
+                "Vita dei campi"
+            ],
+            "citazioni": "Chi fa credenza senza pegno, perde l'amico, la roba e l'ingegno"
         }
+    ],
+    "opzioni": [
+        "Giovanni Pascoli",
+        "Alessandro Manzoni",
+        "Ugo Foscolo",
+        "Giacomo Leopardi",
+        "Gabriele D'Annunzio",
+        "Francesco Petrarca",
+        "Dante Alighieri",
+        "Andrea Camilleri",
+        "Elena Ferrante",
+        "Umberto Eco",
+        "Elsa Morante",
+        "Primo Levi",
+        "Grazia Deledda",
+        "Giosuè Carducci",
+        "Dino Buzzati",
+        "Mario Rigoni Stern",
+        "Beppe Fenoglio",
+        "Carlo Levi",
+        "Giovanni Boccaccio",
+        "Nicolò Machiavelli",
+        "Luigi Pirandello",
+        "Italo Calvino",
+        "Eugenio Montale",
+        "Giuseppe Ungaretti",
+        "Pier Paolo Pasolini",
+        "Umberto Saba",
+        "Giovanni Verga"
     ]
 }
