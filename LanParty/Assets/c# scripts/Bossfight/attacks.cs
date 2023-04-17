@@ -12,16 +12,6 @@ public class Attacks : MonoBehaviour
         Debug.Log("Attacking");
         switch (i)
         {
-<<<<<<< HEAD
-            case 0:  break;
-            case 1:  break;
-            case 2:  break;
-            case 3:  break;
-            case 4:  break;
-            case 5:  break;
-
-            //default:
-=======
             case 0:  Debug.Log("Spin Attack!"); yield return StartCoroutine(Spin()); break;
             case 1:  Debug.Log("Laser Attack!"); break;
             case 2:  Debug.Log("Punch Attack!"); yield return StartCoroutine(Punch()); break;
@@ -30,7 +20,6 @@ public class Attacks : MonoBehaviour
             case 5:  Debug.Log("Stomp Attack!"); yield return StartCoroutine(Stomp()); break;
 
             default: break;
->>>>>>> d88b26f6806a821434a40ba146acb8b364e9bf99
         }
     }
 
