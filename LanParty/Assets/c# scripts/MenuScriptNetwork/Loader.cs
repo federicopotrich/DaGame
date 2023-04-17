@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Netcode;
 public class Loader : MonoBehaviour
 {
     public enum Scene{
@@ -17,9 +18,11 @@ public class Loader : MonoBehaviour
         SceneManager.LoadScene(Loader.targetScene.ToString());
     }
     public static void LoadNetwork(Scene targetScene){
-        Unity.Netcode.NetworkManager.Singleton.SceneManager.LoadScene(targetScene.ToString(), LoadSceneMode.Single);
+        //Debug.Log(targetScene.ToString());
+        NetworkManager.Singleton.SceneManager.LoadScene(targetScene.ToString(), LoadSceneMode.Single);
     }
     public static void LoaderCallback(){
         SceneManager.LoadScene(targetScene.ToString());
     }
+    
 }
