@@ -17,6 +17,7 @@ TagManager:
   - 3
   - 4
   - DataItaliano
+  - Damage
   layers:
   - Default
   - TransparentFX
