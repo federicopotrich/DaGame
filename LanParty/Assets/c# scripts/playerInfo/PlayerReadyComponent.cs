@@ -7,7 +7,6 @@ public class PlayerReadyComponent : NetworkBehaviour
 {
     public static PlayerReadyComponent Instance { get; private set; }
     public Dictionary<ulong, bool> playerReadyDictionaryServerRpc;
-
     void Awake()
     {
         Instance = this;
@@ -37,7 +36,6 @@ public class PlayerReadyComponent : NetworkBehaviour
 
         if (allClientReady)
         {
-            Debug.Log("ciao");
             Loader.LoadNetwork(Loader.Scene.GameSchoolScene);
         }
     }
