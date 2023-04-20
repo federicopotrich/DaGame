@@ -9,7 +9,7 @@ public class GameManagerNet : NetworkBehaviour
 
     private void Awake(){
         Instance = this;
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
     public void startHost(){
         NetworkManager.Singleton.ConnectionApprovalCallback += Net_approval_connection;
