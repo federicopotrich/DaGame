@@ -1,25 +1,26 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using Unity.Netcode;
 public class LobbyManager : NetworkBehaviour
 {
     public Button readyButton;
-    public InputField nameInputField;
-    public Dropdown teamDropdown;
+    public TMP_InputField nameInputField;
+    public TMP_Dropdown teamDropdown;
 
     private Dictionary<string, int> playersReadyServerRpc = new Dictionary<string, int>();
 
     [ServerRpc]
-    public void OnPlayerReady(string playerNameServerRpc, int team)
+    public void OnPlayerReadyServerRpc(string playerNameServerRpc, int team)
     {
         playersReadyServerRpc[playerNameServerRpc] = team;
         CheckAllPlayersReady();
     }
 
     [ClientRpc]
-    public void RpcTeleportToGameScene()
+    public void RpcTeleportToGameSceneClientRpc()
     {
         if (NetworkManager.Singleton.IsServer && NetworkManager.Singleton.LocalClientId == NetworkManager.ServerClientId)
         {
@@ -41,7 +42,7 @@ public class LobbyManager : NetworkBehaviour
 
         if (allPlayersReady)
         {
-            RpcTeleportToGameScene();
+            RpcTeleportToGameSceneClientRpc();
         }
     }
 
@@ -52,7 +53,7 @@ public class LobbyManager : NetworkBehaviour
 
         if (NetworkManager.Singleton.IsServer && NetworkManager.Singleton.LocalClientId == NetworkManager.ServerClientId)
         {
-            OnPlayerReady(playerName, team);
+            OnPlayerReadyServerRpc("server", -1);
         }
         else
         {
@@ -64,6 +65,6 @@ public class LobbyManager : NetworkBehaviour
     
     public void CmdPlayerReady(string playerName, int team)
     {
-        OnPlayerReady(playerName, team);
+        OnPlayerReadyServerRpc(playerName, team);
     }
 }
