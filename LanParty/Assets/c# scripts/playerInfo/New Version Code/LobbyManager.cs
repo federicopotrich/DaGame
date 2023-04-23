@@ -4,67 +4,37 @@ using TMPro;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using Unity.Netcode;
+
 public class LobbyManager : NetworkBehaviour
 {
-    public Button readyButton;
-    public TMP_InputField nameInputField;
-    public TMP_Dropdown teamDropdown;
-
-    private Dictionary<string, int> playersReadyServerRpc = new Dictionary<string, int>();
-
-    [ServerRpc]
-    public void OnPlayerReadyServerRpc(string playerNameServerRpc, int team)
-    {
-        playersReadyServerRpc[playerNameServerRpc] = team;
-        CheckAllPlayersReady();
+    public static LobbyManager instance {get; private set;}
+    private Dictionary<ulong, bool> playersReadyServerRpcDic;
+    private void Awake(){
+        instance = this;
+        playersReadyServerRpcDic = new Dictionary<ulong, bool>();
     }
 
-    [ClientRpc]
-    public void RpcTeleportToGameSceneClientRpc()
-    {
-        if (NetworkManager.Singleton.IsServer && NetworkManager.Singleton.LocalClientId == NetworkManager.ServerClientId)
-        {
-            NetworkManager.Singleton.SceneManager.LoadScene("PlayerInfoNet", LoadSceneMode.Single);
-        }
+    public void SetPlayerReady(){
+        SetPlayerReadyServerRpc();
     }
 
-    private void CheckAllPlayersReady()
-    {
-        bool allPlayersReady = true;
-        foreach (KeyValuePair<string, int> player in playersReadyServerRpc)
+    [ServerRpc(RequireOwnership = false)]
+    private void SetPlayerReadyServerRpc(ServerRpcParams serverRpcParams = default){
+        playersReadyServerRpcDic[serverRpcParams.Receive.SenderClientId] = true;
+
+        bool allClientReady = true;
+
+        foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
-            if (player.Value == 0)
-            {
-                allPlayersReady = false;
+            if(!playersReadyServerRpcDic.ContainsKey(clientId) || !playersReadyServerRpcDic[clientId]){
+                allClientReady = false;
                 break;
             }
         }
 
-        if (allPlayersReady)
-        {
-            RpcTeleportToGameSceneClientRpc();
-        }
-    }
-
-    public void OnReadyButtonClick()
-    {
-        string playerName = nameInputField.text;
-        int team = teamDropdown.value;
-
-        if (NetworkManager.Singleton.IsServer && NetworkManager.Singleton.LocalClientId == NetworkManager.ServerClientId)
-        {
-            OnPlayerReadyServerRpc("server", -1);
-        }
-        else
-        {
-            CmdPlayerReady(playerName, team);
+        if(allClientReady){
+            NetworkManager.Singleton.SceneManager.LoadScene("GameSchoolScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
         }
 
-        readyButton.interactable = false;
-    }
-    
-    public void CmdPlayerReady(string playerName, int team)
-    {
-        OnPlayerReadyServerRpc(playerName, team);
     }
 }

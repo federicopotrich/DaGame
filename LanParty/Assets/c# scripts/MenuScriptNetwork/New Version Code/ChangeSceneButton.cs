@@ -6,20 +6,13 @@ using Unity.Netcode;
 
 public class ChangeSceneButton : NetworkBehaviour
 {
-    private bool b = true;
     [SerializeField] private Button changeSceneButton;
 
     private void Update()
     {
         if (NetworkManager.Singleton.IsServer && NetworkManager.Singleton.LocalClientId == NetworkManager.ServerClientId)
         {
-            // Solo l'host abilita il pulsante
-            changeSceneButton.interactable = true;
-            if (b)
-            {
-                changeSceneButton.onClick.AddListener(ChangeScene);
-            }
-            b = false;
+            changeSceneButton.onClick.AddListener(ChangeScene);
         }
         else
         {

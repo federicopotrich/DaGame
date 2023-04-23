@@ -1,54 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Unity.Netcode;
+using System.Collections.Generic;
+using System.Collections;
+
 public class ConnectionServerHostClient : NetworkBehaviour
 {
-    //private string ipAddress = "192.168.127.137";
+    [SerializeField] private Button startHostButton, startClientButton, continueButton;
+    void Awake(){
+        startHostButton.onClick.AddListener(()=>{
+            GameManagerNet.Instance.startHost();
+            continueButton.gameObject.SetActive(true);
+            continueButton.onClick.AddListener(()=>{
+                NetworkManager.Singleton.SceneManager.LoadScene("PlayerInfoNet", UnityEngine.SceneManagement.LoadSceneMode.Single);
+            });
+        });
 
-    [SerializeField] private Button hostButton;
-    [SerializeField] private Button clientButton;
-    public NetworkManager nm;
-
-    private void Awake()
-    {
-        hostButton.onClick.AddListener(StartHost);
-        clientButton.onClick.AddListener(StartClient);
+        startClientButton.onClick.AddListener(()=>{
+            startHostButton.interactable = startClientButton.interactable = false;
+            GameManagerNet.Instance.startClient();
+        });
     }
-    private void StartHost()
-    {
-        // Configura l'host
-        //NetworkManager.Singleton.NetworkConfig.ConnectionData = System.Text.Encoding.ASCII.GetBytes("Hello world!");
-
-        // Avvia l'host
-        var task = NetworkManager.Singleton.StartServer();
-
-        if (!task)
-        {
-            Debug.LogError("Host start failed");
-        }
-        else
-        {
-            Debug.Log("Host started");
-        }
-    }
-    private void StartClient()
-    {
-        if (NetworkManager.Singleton.IsClient)
-        {
-            return;
-        }
-
-        NetworkManager.Singleton.NetworkConfig.ConnectionData = System.Text.Encoding.ASCII.GetBytes("<ip_address>");
-
-        // Connetti al server
-        var task = NetworkManager.Singleton.StartClient();
-        if (!task)
-        {
-            Debug.LogError("Connection failed");
-        }
-        else
-        {
-            Debug.Log("Connected to server");
-        }
-    }
+    
 }
