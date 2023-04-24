@@ -25,11 +25,19 @@ public class GameManagerFixed : NetworkBehaviour
         }
     }
     private void SceneManager_OnLoadEventCompleted(string sceneName, UnityEngine.SceneManagement.LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut){
+        int ctr = 0;
         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
             if(NetworkManager.IsClient){
                 Transform playerTransform = Instantiate(playerPrefab);
+                Camera playerCamera = playerTransform.GetComponentInChildren<Camera>();
+
+                // Imposta la camera del player come camera principale della scena
+                playerCamera.tag = "MainCamera";
+                playerCamera.enabled = true;
+                playerCamera.targetDisplay = ctr;
                 playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
+                ctr++;
             }
         }
     }
