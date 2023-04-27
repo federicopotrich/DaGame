@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MatematicaGameManager : MonoBehaviour
 {
@@ -12,16 +13,21 @@ public class MatematicaGameManager : MonoBehaviour
     public GameObject [] cells;
     public int target;
     public int currentValue;
-    public int points;
+    public int points = 0;
     public bool substraction = false;
+
+    private TextMeshProUGUI textTarget;  
+    private TextMeshProUGUI textCurrent;     
+
     public Sprite [] numbers;
     // Start is called before the first frame update
     void Start()
     {
+        textTarget = GameObject.Find("Target").GetComponent<TextMeshProUGUI>();
+        textCurrent = GameObject.Find("Current").GetComponent<TextMeshProUGUI>();
         int [,] matrix = nextBigTable(); 
-        currentValue = matrix[currentPosI,currentPosJ];
-        Debug.Log(target);
-        
+        textTarget.text = "target: "+target;
+        textCurrent.text = "total points "+ points;
     }
 
     private int[,] nextBigTable() {
@@ -56,8 +62,11 @@ public class MatematicaGameManager : MonoBehaviour
         }
         cells[12].GetComponent<UnityEngine.UI.Image>().sprite = numbers[bigTable[2, 2]+9];
         target = Random.Range(0,25);
+        textTarget.text = "target: "+ target;
+        currentValue = bigTable[currentPosI,currentPosJ];
         return bigTable;
     }
+
 
     // Update is called once per frame
     void Update()
@@ -104,17 +113,17 @@ public class MatematicaGameManager : MonoBehaviour
     }
 
     public void confirm(){
+        Debug.Log(currentPosI+" "+ currentPosJ +" " +currentValue+" " +target);
         if(currentValue == target &&  (currentPosI == 0 || currentPosI == 4 || currentPosJ == 0 || currentPosJ == 4)){
             points++;
             resetTable();
         }
         else
             resetTable();
-        Debug.Log(points);
+        textCurrent.text = "total points: "+points;
     }
 
     public void resetTable(){
-        target = Random.Range(0,25);
         currentPosI = 2;
         currentPosJ = 2;
         nextBigTable();

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
-public class PlayerControllerNet : MonoBehaviour
+public class PlayerControllerNet : NetworkBehaviour
 {
     public float speed;
     void Start()
@@ -13,6 +13,9 @@ public class PlayerControllerNet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!IsOwner){
+            return;
+        }
         float x = 0;
         float y = 0;
         if(Input.GetKey(KeyCode.A) != Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.LeftArrow) != Input.GetKey(KeyCode.RightArrow)){
