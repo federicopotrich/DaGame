@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6467974896392074844}
   - component: {fileID: 6467974896392074845}
+  - component: {fileID: -1273961509731398505}
   m_Layer: 0
   m_Name: stompMeme
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6467974896392074847}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.536312, y: 44.66, z: -0.1558601}
+  m_LocalPosition: {x: -8, y: 15, z: -0.1558601}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -46,7 +47,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -5.2, y: 32.91}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -142,6 +143,21 @@ PolygonCollider2D:
       - {x: 24.443947, y: -6.971443}
       - {x: 23.878727, y: -10.11219}
       - {x: 21.389025, y: -6.727009}
+--- !u!114 &-1273961509731398505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6467974896392074847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961e51a0b17e84c40b9324bd6c714aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 15
+  active: 0
+  spin: 0
 --- !u!1 &6467974897272889847
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6467974897272889847}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5, y: -17.9, z: 0.1558601}
+  m_LocalPosition: {x: -0.8, y: 15, z: 0.1558601}
   m_LocalScale: {x: 78.77903, y: 73.18915, z: 59.36}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -216,7 +232,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: bf5ea5193fa1cc3469f865c13aeff96d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.8509804}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

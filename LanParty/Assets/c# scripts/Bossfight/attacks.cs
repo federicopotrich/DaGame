@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class Attacks : MonoBehaviour
 {
     
-    public GameObject punch, stomp, spin, idd;
+    public GameObject punch, stomp, spin, idd, laser, yeet, sun;
     public Animator bossAnim;
 
     public IEnumerator call(int i){
@@ -13,9 +14,9 @@ public class Attacks : MonoBehaviour
         switch (i)
         {
             case 0:  Debug.Log("Spin Attack!"); yield return StartCoroutine(Spin()); break;
-            case 1:  Debug.Log("Laser Attack!"); break;
+            case 1:  Debug.Log("Laser Attack!"); yield return StartCoroutine(Laser()); break;
             case 2:  Debug.Log("Punch Attack!"); yield return StartCoroutine(Punch()); break;
-            case 3:  Debug.Log("Yeet Attack!"); break;
+            case 3:  Debug.Log("Yeet Attack!"); yield return StartCoroutine(Yeet()); break;
             case 4:  Debug.Log("IRA DEGLI DEI! Attack!"); yield return StartCoroutine(IDD()); break;
             case 5:  Debug.Log("Stomp Attack!"); yield return StartCoroutine(Stomp()); break;
 
@@ -33,7 +34,13 @@ public class Attacks : MonoBehaviour
     }
 
     IEnumerator Stomp(){
-        GameObject stomptmp = GameObject.Instantiate(stomp,new Vector3(this.transform.position.x+5,this.transform.position.y-5,0),Quaternion.identity);
+        GameObject stomptmp;
+        if((int) Random.Range(0,11)==10){
+            stomptmp = GameObject.Instantiate(sun,new Vector3(this.transform.position.x+5,this.transform.position.y-5,0),Quaternion.identity);
+        }else{
+
+            stomptmp = GameObject.Instantiate(stomp,new Vector3(this.transform.position.x+5,this.transform.position.y-5,0),Quaternion.identity);
+        }
         yield return new WaitForSeconds(1f);
         bossAnim.SetBool("stomp",true);
         yield return new WaitForSeconds(1.5f);
@@ -70,4 +77,21 @@ public class Attacks : MonoBehaviour
         bossAnim.SetBool("iraDegliDei",false);
     }
 
+    IEnumerator Laser(){
+        bossAnim.SetBool("lazer",true);
+        yield return new WaitForSeconds(1f);
+        GameObject lasertmp = GameObject.Instantiate(laser,new Vector3(this.transform.position.x+7,this.transform.position.y+20,0),Quaternion.identity);
+        yield return new WaitForSeconds(2.5f);
+        bossAnim.SetBool("lazer",false);
+        Destroy(lasertmp);
+    }
+
+    IEnumerator Yeet(){
+        GameObject Yeettmp = GameObject.Instantiate(yeet,new Vector3(this.transform.position.x+12,this.transform.position.y-10,0),Quaternion.identity);
+        yield return new WaitForSeconds(1f);
+        bossAnim.SetBool("yeet",true);
+        yield return new WaitForSeconds(1.5f);
+        bossAnim.SetBool("yeet",false);
+        Destroy(Yeettmp);
+    }
 }
