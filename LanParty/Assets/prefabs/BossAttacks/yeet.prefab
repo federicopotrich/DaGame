@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6344137029678962485}
   - component: {fileID: 6344137029678962486}
+  - component: {fileID: 1983429313119000212}
   m_Layer: 0
   m_Name: yeet
   m_TagString: Untagged
@@ -61,6 +62,21 @@ PolygonCollider2D:
     - - {x: 32.746323, y: -14.831898}
       - {x: -11.235024, y: -38.120552}
       - {x: -9.5186, y: 11.910629}
+--- !u!114 &1983429313119000212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6344137029678962484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961e51a0b17e84c40b9324bd6c714aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 0
+  active: 0
+  spin: 0
 --- !u!1 &6344137030701574804
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +151,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 100
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.73392534, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.73392534, a: 0.7058824}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

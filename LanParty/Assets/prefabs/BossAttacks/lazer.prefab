@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4292625011275897952}
   - component: {fileID: 4292625011275897959}
+  - component: {fileID: -7212010231039928508}
   m_Layer: 0
   m_Name: lazer
   m_TagString: Untagged
@@ -59,6 +60,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 16.588268, y: 134.17398}
   m_EdgeRadius: 0
+--- !u!114 &-7212010231039928508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4292625011275897953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961e51a0b17e84c40b9324bd6c714aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 20
+  active: 0
+  spin: 1
 --- !u!1 &4292625011622116819
 GameObject:
   m_ObjectHideFlags: 0
