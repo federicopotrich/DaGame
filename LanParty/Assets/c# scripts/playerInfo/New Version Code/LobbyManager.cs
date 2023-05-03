@@ -7,29 +7,39 @@ using Unity.Netcode;
 
 public class LobbyManager : NetworkBehaviour
 {
-    public static LobbyManager instance {get; private set;}
+    public static LobbyManager instance { get; private set; }
     private Dictionary<ulong, UtenteReady> playersReadyServerRpcDic;
-    private void Awake(){
+    private void Awake()
+    {
         instance = this;
         playersReadyServerRpcDic = new Dictionary<ulong, UtenteReady>();
     }
 
-    public void SetPlayerReady(){
-        Debug.Log(NetworkManager.Singleton.IsClient);
+    public void SetPlayerReady()
+    {
         SetPlayerReadyServerRpc();
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void SetPlayerReadyServerRpc(ServerRpcParams serverRpcParams = default){
+    private void SetPlayerReadyServerRpc(ServerRpcParams serverRpcParams = default)
+    {
         UtenteReady u = new UtenteReady();
         u.ready = true;
-        if(NetworkManager.Singleton.IsHost){
-            if (GameObject.Find("UserName").GetComponent<TMP_InputField>().text != "")
+        if (!NetworkManager.Singleton.IsHost)
+        {
+            TMP_InputField inputField = GameObject.FindObjectOfType<TMP_InputField>();
+            if (inputField != null && inputField.text != "")
             {
-                u._name = GameObject.Find("UserName").GetComponent<TMP_InputField>().text;
-            }else{
-                u._name = "host";
+                u._name = inputField.text;
             }
+            else
+            {
+                u._name = "guest";
+            }
+        }
+        else
+        {
+            u._name = "host";
         }
 
         Debug.Log(u._name);
@@ -39,13 +49,15 @@ public class LobbyManager : NetworkBehaviour
 
         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
-            if(!playersReadyServerRpcDic.ContainsKey(clientId) || !playersReadyServerRpcDic[clientId].ready){
+            if (!playersReadyServerRpcDic.ContainsKey(clientId) || !playersReadyServerRpcDic[clientId].ready)
+            {
                 allClientReady = false;
                 break;
             }
         }
 
-        if(allClientReady){
+        if (allClientReady)
+        {
             GameObject g = Instantiate(new GameObject());
 
             g.AddComponent<c>();
@@ -54,14 +66,16 @@ public class LobbyManager : NetworkBehaviour
             DontDestroyOnLoad(g);
             NetworkManager.Singleton.SceneManager.LoadScene("GameSchoolScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
         }
-
     }
+
 }
-public class UtenteReady{
+public class UtenteReady
+{
     public bool ready;
     public string _name;
 }
 
-public class c : MonoBehaviour{
-    public  Dictionary<ulong, UtenteReady> players;
+public class c : MonoBehaviour
+{
+    public Dictionary<ulong, UtenteReady> players;
 }

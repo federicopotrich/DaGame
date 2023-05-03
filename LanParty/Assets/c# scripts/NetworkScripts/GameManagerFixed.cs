@@ -31,12 +31,12 @@ public class GameManagerFixed : NetworkBehaviour
             if(NetworkManager.IsClient){
                 Transform playerTransform = Instantiate(playerPrefab);
                 Camera playerCamera = playerTransform.GetComponentInChildren<Camera>();
-                playerCamera.gameObject.name = "Camera: " + NetworkManager.Singleton.LocalClientId;
+                playerCamera.gameObject.name = "Camera: " + ctr;
 
                 // Imposta la camera del player come camera principale della scena
                 playerCamera.tag = "MainCamera";
                 playerCamera.enabled = true;
-                playerCamera.targetDisplay = (int)NetworkManager.Singleton.LocalClientId;
+                playerCamera.targetDisplay = ctr;
                 playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
                 ctr++;
             }
