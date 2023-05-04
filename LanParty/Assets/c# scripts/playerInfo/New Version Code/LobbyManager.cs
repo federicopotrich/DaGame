@@ -25,6 +25,9 @@ public class LobbyManager : NetworkBehaviour
     {
         UtenteReady u = new UtenteReady();
         u.ready = true;
+
+        Debug.Log(NetworkManager.Singleton.IsHost);
+
         if (!NetworkManager.Singleton.IsHost)
         {
             TMP_InputField inputField = GameObject.FindObjectOfType<TMP_InputField>();

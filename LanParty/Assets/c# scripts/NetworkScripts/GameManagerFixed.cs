@@ -28,7 +28,7 @@ public class GameManagerFixed : NetworkBehaviour
         int ctr = 0;
         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
-            if(NetworkManager.IsClient){
+            if(NetworkManager.Singleton.IsClient){
                 Transform playerTransform = Instantiate(playerPrefab);
                 Camera playerCamera = playerTransform.GetComponentInChildren<Camera>();
                 playerCamera.gameObject.name = "Camera: " + ctr;
