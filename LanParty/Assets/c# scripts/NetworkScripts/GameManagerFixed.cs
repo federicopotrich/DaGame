@@ -28,14 +28,15 @@ public class GameManagerFixed : NetworkBehaviour
         int ctr = 0;
         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
-            if(NetworkManager.Singleton.IsClient){
+            if(NetworkManager.IsClient){
                 Transform playerTransform = Instantiate(playerPrefab);
                 Camera playerCamera = playerTransform.GetComponentInChildren<Camera>();
+                playerCamera.gameObject.name = "Camera: " + ctr;
 
                 // Imposta la camera del player come camera principale della scena
                 playerCamera.tag = "MainCamera";
                 playerCamera.enabled = true;
-                playerCamera.targetDisplay = 4;
+                playerCamera.targetDisplay = ctr;
                 playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
                 ctr++;
             }
