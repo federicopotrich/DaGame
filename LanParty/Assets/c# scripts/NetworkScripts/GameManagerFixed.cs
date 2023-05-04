@@ -35,7 +35,7 @@ public class GameManagerFixed : NetworkBehaviour
                 // Imposta la camera del player come camera principale della scena
                 playerCamera.tag = "MainCamera";
                 playerCamera.enabled = true;
-                playerCamera.targetDisplay = ctr;
+                playerCamera.targetDisplay = 4;
                 playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
                 ctr++;
             }
