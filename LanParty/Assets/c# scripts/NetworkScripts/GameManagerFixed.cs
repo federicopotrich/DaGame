@@ -25,7 +25,7 @@ public class GameManagerFixed : NetworkBehaviour
         }
     }
     private void SceneManager_OnLoadEventCompleted(string sceneName, UnityEngine.SceneManagement.LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut){
-        int ctr = 0;
+        int ctr = 1;
         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
             if(NetworkManager.IsClient){
