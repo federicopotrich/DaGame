@@ -7,20 +7,19 @@ using Unity.Netcode;
 
 public class LobbyManager : NetworkBehaviour
 {
-    public static LobbyManager instance { get; private set; }
-    private Dictionary<ulong, UtenteReady> playersReadyServerRpcDic;
-    private void Awake()
-    {
+    public static LobbyManager instance {get; private set;}
+    private Dictionary<ulong, bool> playersReadyServerRpcDic;
+    private void Awake(){
         instance = this;
-        playersReadyServerRpcDic = new Dictionary<ulong, UtenteReady>();
+        playersReadyServerRpcDic = new Dictionary<ulong, bool>();
     }
 
-    public void SetPlayerReady()
-    {
+    public void SetPlayerReady(){
         SetPlayerReadyServerRpc();
     }
 
     [ServerRpc(RequireOwnership = false)]
+<<<<<<< HEAD
     private void SetPlayerReadyServerRpc(ServerRpcParams serverRpcParams = default)
     {
         UtenteReady u = new UtenteReady();
@@ -44,41 +43,24 @@ public class LobbyManager : NetworkBehaviour
         {
             u._name = "host";
         }
+=======
+    private void SetPlayerReadyServerRpc(ServerRpcParams serverRpcParams = default){
+        playersReadyServerRpcDic[serverRpcParams.Receive.SenderClientId] = true;
+>>>>>>> eace0bea9f82c182f795795bbb5d1742d88ae479
 
-        Debug.Log(u._name);
-
-        playersReadyServerRpcDic[serverRpcParams.Receive.SenderClientId] = u;
         bool allClientReady = true;
 
         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
-            if (!playersReadyServerRpcDic.ContainsKey(clientId) || !playersReadyServerRpcDic[clientId].ready)
-            {
+            if(!playersReadyServerRpcDic.ContainsKey(clientId) || !playersReadyServerRpcDic[clientId]){
                 allClientReady = false;
                 break;
             }
         }
 
-        if (allClientReady)
-        {
-            GameObject g = Instantiate(new GameObject());
-
-            g.AddComponent<c>();
-            g.GetComponent<c>().players = playersReadyServerRpcDic;
-            g.name = "dataConnectedPlayers";
-            DontDestroyOnLoad(g);
+        if(allClientReady){
             NetworkManager.Singleton.SceneManager.LoadScene("GameSchoolScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
         }
+
     }
-
-}
-public class UtenteReady
-{
-    public bool ready;
-    public string _name;
-}
-
-public class c : MonoBehaviour
-{
-    public Dictionary<ulong, UtenteReady> players;
 }
