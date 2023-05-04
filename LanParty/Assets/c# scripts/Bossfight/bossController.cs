@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 public class bossController : MonoBehaviour
 {
-    
+    private int maxHP;
     public int hp;
     public Transform[] BossSpots;
     float speed;
@@ -12,12 +13,16 @@ public class bossController : MonoBehaviour
     bool b;
     public Attacks att;
 
+    public Slider HPBar;
 
     void Start()
     {
         speed = 10f;
         spotIndex = (int) Random.Range(0,3);
         b = false;
+        hp = maxHP = 50;
+        HPBar.maxValue = maxHP;
+        HPBar.value = hp;
         StartCoroutine(ChangeBehaviour());
     }
 
