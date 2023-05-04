@@ -8,59 +8,58 @@ using Unity.Netcode;
 public class LobbyManager : NetworkBehaviour
 {
     public static LobbyManager instance {get; private set;}
-    private Dictionary<ulong, bool> playersReadyServerRpcDic;
+    private Dictionary<ulong, UtenteReady> playersReadyServerRpcDic;
     private void Awake(){
         instance = this;
-        playersReadyServerRpcDic = new Dictionary<ulong, bool>();
+        playersReadyServerRpcDic = new Dictionary<ulong, UtenteReady>();
     }
 
     public void SetPlayerReady(){
+        Debug.Log(NetworkManager.Singleton.IsClient);
         SetPlayerReadyServerRpc();
     }
 
     [ServerRpc(RequireOwnership = false)]
-<<<<<<< HEAD
-    private void SetPlayerReadyServerRpc(ServerRpcParams serverRpcParams = default)
-    {
+    private void SetPlayerReadyServerRpc(ServerRpcParams serverRpcParams = default){
         UtenteReady u = new UtenteReady();
         u.ready = true;
-
-        Debug.Log(NetworkManager.Singleton.IsHost);
-
-        if (!NetworkManager.Singleton.IsHost)
-        {
-            TMP_InputField inputField = GameObject.FindObjectOfType<TMP_InputField>();
-            if (inputField != null && inputField.text != "")
+        if(!NetworkManager.Singleton.IsHost){
+            if (GameObject.Find("UserName").GetComponent<TMP_InputField>().text != "")
             {
-                u._name = inputField.text;
-            }
-            else
-            {
-                u._name = "guest";
+                u._name = GameObject.Find("UserName").GetComponent<TMP_InputField>().text;
+            }else{
+                u._name = "host";
             }
         }
-        else
-        {
-            u._name = "host";
-        }
-=======
-    private void SetPlayerReadyServerRpc(ServerRpcParams serverRpcParams = default){
-        playersReadyServerRpcDic[serverRpcParams.Receive.SenderClientId] = true;
->>>>>>> eace0bea9f82c182f795795bbb5d1742d88ae479
 
+        playersReadyServerRpcDic[serverRpcParams.Receive.SenderClientId] = u;
         bool allClientReady = true;
 
         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
-            if(!playersReadyServerRpcDic.ContainsKey(clientId) || !playersReadyServerRpcDic[clientId]){
+            if(!playersReadyServerRpcDic.ContainsKey(clientId) || !playersReadyServerRpcDic[clientId].ready){
                 allClientReady = false;
                 break;
             }
         }
 
         if(allClientReady){
+            GameObject g = Instantiate(new GameObject());
+
+            g.AddComponent<c>();
+            g.GetComponent<c>().players = playersReadyServerRpcDic;
+            g.name = "dataConnectedPlayers";
+            DontDestroyOnLoad(g);
             NetworkManager.Singleton.SceneManager.LoadScene("GameSchoolScene", UnityEngine.SceneManagement.LoadSceneMode.Single);
         }
 
     }
+}
+public class UtenteReady{
+    public bool ready;
+    public string _name;
+}
+
+public class c : MonoBehaviour{
+    public  Dictionary<ulong, UtenteReady> players;
 }
