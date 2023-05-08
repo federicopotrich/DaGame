@@ -149,8 +149,8 @@ public class GameManager : MonoBehaviour
 
                     g.AddComponent<italianoData>();
                     g.GetComponent<italianoData>().poeta = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].poeta;
-                    g.GetComponent<italianoData>().emoji = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].emoji;
-                    g.GetComponent<italianoData>().opzioni = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].opzioni;
+                    g.GetComponent<italianoData>().opere = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].opere;
+                    g.GetComponent<italianoData>().citazioni = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].citazioni;
                     DontDestroyOnLoad(g);
                 }
                 
@@ -234,6 +234,6 @@ public class storiaData : MonoBehaviour
 public class italianoData : MonoBehaviour
 {
     public string poeta;
-    public string emoji;
-    public string [] opzioni;
+    public string[] opere;
+    public string citazioni;
 }
