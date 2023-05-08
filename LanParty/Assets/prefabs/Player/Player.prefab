@@ -17,7 +17,11 @@ GameObject:
   - component: {fileID: 1305061910088636018}
   - component: {fileID: 3353552433484659009}
   - component: {fileID: 7495018826400372506}
+<<<<<<< HEAD
   - component: {fileID: 6554309088902346767}
+=======
+  - component: {fileID: 5611041136370294481}
+>>>>>>> ee73100654ae61171a3d64c114d15d270476f17e
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -83,7 +87,11 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1000
+<<<<<<< HEAD
   m_Sprite: {fileID: -1888745483, guid: e9684a931d91f554b92ac03553f77b43, type: 3}
+=======
+  m_Sprite: {fileID: -1888745483, guid: 8563befc5e23a6f4599333d4303218e4, type: 3}
+>>>>>>> ee73100654ae61171a3d64c114d15d270476f17e
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,7 +160,11 @@ Animator:
   m_GameObject: {fileID: 3353552433484659014}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
+<<<<<<< HEAD
   m_Controller: {fileID: 9100000, guid: 3e2a989f1f00fb7459c5ff1ff5bf4f29, type: 2}
+=======
+  m_Controller: {fileID: 9100000, guid: 6983fd488e9d5ef4ab51abc82e562a0f, type: 2}
+>>>>>>> ee73100654ae61171a3d64c114d15d270476f17e
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -217,7 +229,11 @@ MonoBehaviour:
   ScaleThreshold: 0.01
   InLocalSpace: 0
   Interpolate: 1
+<<<<<<< HEAD
 --- !u!70 &6554309088902346767
+=======
+--- !u!70 &5611041136370294481
+>>>>>>> ee73100654ae61171a3d64c114d15d270476f17e
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,8 +246,13 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< HEAD
   m_Offset: {x: -0.0024457276, y: 0}
   m_Size: {x: 0.13412681, y: 0.32}
+=======
+  m_Offset: {x: -0.0011988402, y: 0}
+  m_Size: {x: 0.13057883, y: 0.32}
+>>>>>>> ee73100654ae61171a3d64c114d15d270476f17e
   m_Direction: 0
 --- !u!1 &3353552433584697679
 GameObject:
@@ -768,6 +789,7 @@ GameObject:
   - component: {fileID: 3353552435077963238}
   - component: {fileID: 3353552435077963033}
   - component: {fileID: 3353552435077963035}
+  - component: {fileID: 8448989883264483792}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -841,3 +863,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3353552435077963034}
   m_Enabled: 1
+--- !u!114 &8448989883264483792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3353552435077963034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GlobalObjectIdHash: 951099334
+  AlwaysReplicateAsRoot: 0
+  DontDestroyWithOwner: 0
+  AutoObjectParentSync: 1
