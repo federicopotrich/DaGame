@@ -58,7 +58,7 @@ public class bossController : MonoBehaviour
             int index = (int) Random.Range(0,21);
             if(index%2==0){
                 index = (int) Random.Range(0,6);
-                yield return StartCoroutine(att.call(3));
+                yield return StartCoroutine(att.call(index));
                 StartCoroutine(ChangeBehaviour());
             }
             else
