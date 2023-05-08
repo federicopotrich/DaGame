@@ -18,6 +18,7 @@ TagManager:
   - 4
   - DataItaliano
   - Damage
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX

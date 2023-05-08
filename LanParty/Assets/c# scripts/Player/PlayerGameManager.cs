@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.Netcode;
 
 public class PlayerGameManager : MonoBehaviour
 {
     public GameObject [] arrPiani;
     public Stats myStats;
     // Start is called before the first frame update
+    public string namePlayer;
     void Start()
     {
+        namePlayer = GameObject.Find("dataConnectedPlayers").GetComponent<c>().players[NetworkManager.Singleton.LocalClientId]._name;
         this.gameObject.AddComponent<PlayerInventory>();
 
         myStats = this.gameObject.AddComponent<Stats>();
@@ -22,6 +25,7 @@ public class PlayerGameManager : MonoBehaviour
         interactionPlayer.s = myStats;
         
         this.gameObject.GetComponent<PlayerControllerNet>().speed = 10;
+        
     }
     void Update()
     {

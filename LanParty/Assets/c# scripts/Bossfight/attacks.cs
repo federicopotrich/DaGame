@@ -10,15 +10,14 @@ public class Attacks : MonoBehaviour
     public Animator bossAnim;
 
     public IEnumerator call(int i){
-        Debug.Log("Attacking");
         switch (i)
         {
-            case 0:  Debug.Log("Spin Attack!"); yield return StartCoroutine(Spin()); break;
-            case 1:  Debug.Log("Laser Attack!"); yield return StartCoroutine(Laser()); break;
-            case 2:  Debug.Log("Punch Attack!"); yield return StartCoroutine(Punch()); break;
-            case 3:  Debug.Log("Yeet Attack!"); yield return StartCoroutine(Yeet()); break;
-            case 4:  Debug.Log("IRA DEGLI DEI! Attack!"); yield return StartCoroutine(IDD()); break;
-            case 5:  Debug.Log("Stomp Attack!"); yield return StartCoroutine(Stomp()); break;
+            case 0:   yield return StartCoroutine(Spin()); break;
+            case 1:   yield return StartCoroutine(Laser()); break;
+            case 2:   yield return StartCoroutine(Punch()); break;
+            case 3:   yield return StartCoroutine(Yeet()); break;
+            case 4:   yield return StartCoroutine(IDD()); break;
+            case 5:   yield return StartCoroutine(Stomp()); break;
 
             default: break;
         }

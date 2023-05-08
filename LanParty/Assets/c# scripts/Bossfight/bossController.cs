@@ -28,11 +28,10 @@ public class bossController : MonoBehaviour
 
     void Update()
     {
-
+        HPBar.value = hp;
     }
 
     IEnumerator Move(){
-        Debug.Log("Moving");
         while(b==false){
             yield return new WaitForFixedUpdate();
             this.transform.position = Vector2.MoveTowards(this.transform.position, BossSpots[spotIndex].transform.position, speed*Time.deltaTime);
@@ -43,7 +42,6 @@ public class bossController : MonoBehaviour
     }
 
     IEnumerator ChangeDirection(){
-        Debug.Log("Direction change");
         spotIndex = (int) Random.Range(0,3);
         b = false;
         yield return new WaitForSeconds(0);
@@ -51,11 +49,9 @@ public class bossController : MonoBehaviour
     }
 
     IEnumerator ChangeBehaviour(){
-        Debug.Log("Behaviour change");
         if(!b)
             yield return StartCoroutine(Move());   
         else{
-            Debug.Log("attack or move");
             int index = (int) Random.Range(0,21);
             if(index%2==0){
                 index = (int) Random.Range(0,6);
@@ -64,6 +60,13 @@ public class bossController : MonoBehaviour
             }
             else
                 yield return ChangeDirection();
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D coll){
+        if(coll.gameObject.tag=="PlayerAttack"){
+            Debug.Log("AAAAAAAAAAAAAAAAAAAA");
+            hp = hp - coll.gameObject.GetComponent<SlashScript>().damage;
         }
     }
 }
