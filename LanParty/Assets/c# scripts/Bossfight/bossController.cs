@@ -32,6 +32,7 @@ public class bossController : MonoBehaviour
     }
 
     IEnumerator Move(){
+
         while(b==false){
             yield return new WaitForFixedUpdate();
             this.transform.position = Vector2.MoveTowards(this.transform.position, BossSpots[spotIndex].transform.position, speed*Time.deltaTime);
@@ -42,6 +43,7 @@ public class bossController : MonoBehaviour
     }
 
     IEnumerator ChangeDirection(){
+
         spotIndex = (int) Random.Range(0,3);
         b = false;
         yield return new WaitForSeconds(0);
@@ -49,6 +51,7 @@ public class bossController : MonoBehaviour
     }
 
     IEnumerator ChangeBehaviour(){
+
         if(!b)
             yield return StartCoroutine(Move());   
         else{
