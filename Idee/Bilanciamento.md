@@ -10,4 +10,4 @@ Formula vita: (50) + (10xValore Armatura)
 
 ### Lista armature e statistiche
 
-| Nome Armature | | Valore Armatura | | Costo |
+| Nome Armature | Valore Armatura | Costo ---| --- | --- | --- Jotaro | 30 | 50 |
