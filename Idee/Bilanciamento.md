@@ -12,4 +12,7 @@ Formula vita: (50) + (10xValore Armatura)
 
 |Nome Armature|Valore Armatura|Costo|
 |:---:|:---:|:---:|
-|Jotaro|30|50|
+|Jotaro|x|x|
+|Armatura del sole|x|x|
+|Salvagente|x|x|
+|Godfrey|x|x|
