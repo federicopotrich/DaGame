@@ -22,16 +22,36 @@ On hit: DannoEffettivo =
 |Armatura del sole|50|x|
 |Godfrey|60|x|
 
-##Danni
+## Danni
+### Lista Armi
+|Nome Arma|Danno|Tipo|Costo|
+|:---:|:---:|:---:|:---:|
+|Banana|3|Ranged|x|
+|Cat|3|Melee|x|
+|Dagger|10|Melee|x|
+|Sling Shot|5|Ranged|x|
+|Revolver|7|Ranged|x|
+|Claymore|14|Melee|x|
+|Excalibur|19|Melee|x|
+|Rivers of Blood|25|Melee|x|
+|Nail|31|Melee|x|
+|BOTRK|35|Melee|x|
+|Crucible|40|MELEE!|x|
+|BFG|14|RANGED||x|
+
+
 
 ## Boss
+
+
+
 ### Lista attacchi e danno
 |Nome Attacco|Danno|Descrizione|
 |:---:|:---:|:---:|
 |Punch|20|Squared Area Below Antennorg|
-|Stomp|17|AoE , Antennorg as Center|
-|StompEaster|x|Stomp but larger and trikier Area|
-|Yeet|x|AoE, triangular area to the side|
-|Ira degli dei|x|Largest AoE|
-|Spin|x|Large AoE, x4 hit|
-|Laser|x|Hits the whole map, spinning|
+|Stomp|18|AoE , Antennorg as Center|
+|StompEaster|23|Stomp but larger and trikier Area|
+|Yeet|25|AoE, triangular area to the side; pushed aside|
+|Ira degli dei|17|Largest AoE|
+|Spin|20|Large AoE, x4 hit|
+|Laser|42|Hits the whole map, spinning|
