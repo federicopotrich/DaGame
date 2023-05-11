@@ -26,12 +26,12 @@ On hit: DannoEffettivo =
 
 ## Boss
 ### Lista attacchi e danno
-|Nome Attacco|Danno|
-|:---:|:---:|
-|Punch|x|
-|Stomp|x|
-|StompEaster|x|
-|Yeet|x|
-|Ira degli dei|x|
-|Spin|x|
-|Laser|x|
+|Nome Attacco|Danno|Descrizione|
+|:---:|:---:|:---:|
+|Punch|x|x|
+|Stomp|x|x|
+|StompEaster|x|x|
+|Yeet|x|x|
+|Ira degli dei|x|x|
+|Spin|x|x|
+|Laser|x|x|
