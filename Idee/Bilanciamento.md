@@ -28,10 +28,10 @@ On hit: DannoEffettivo =
 ### Lista attacchi e danno
 |Nome Attacco|Danno|Descrizione|
 |:---:|:---:|:---:|
-|Punch|x|x|
-|Stomp|x|x|
-|StompEaster|x|x|
-|Yeet|x|x|
-|Ira degli dei|x|x|
-|Spin|x|x|
-|Laser|x|x|
+|Punch|20|Squared Area Below Antennorg|
+|Stomp|17|AoE , Antennorg as Center|
+|StompEaster|x|Stomp but larger and trikier Area|
+|Yeet|x|AoE, triangular area to the side|
+|Ira degli dei|x|Largest AoE|
+|Spin|x|Large AoE, x4 hit|
+|Laser|x|Hits the whole map, spinning|
