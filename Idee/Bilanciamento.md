@@ -36,14 +36,13 @@ On hit: DannoEffettivo =
 |Rivers of Blood|25|Melee|x|
 |Nail|31|Melee|x|
 |BOTRK|35|Melee|x|
-|Crucible|40|MELEE!|x|
-|BFG|14|RANGED||x|
-
+|Crucible|66|MELEE!|x|
+|BFG|14|RANGED!|x|
 
 
 ## Boss
-
-
+### Hp Boss
+**HP Boss: NumeroGiocatori x 980**
 
 ### Lista attacchi e danno
 |Nome Attacco|Danno|Descrizione|
