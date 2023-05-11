@@ -68,9 +68,9 @@ public class Attacks : MonoBehaviour
     IEnumerator IDD(){
         
         bossAnim.SetBool("iraDegliDei",true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         GameObject iddtmp = GameObject.Instantiate(idd,new Vector3(this.transform.position.x+5,this.transform.position.y,0),Quaternion.identity);
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(1.8f);
         Destroy(iddtmp);
         yield return new WaitForSeconds(1f);
         bossAnim.SetBool("iraDegliDei",false);
@@ -86,7 +86,7 @@ public class Attacks : MonoBehaviour
     }
 
     IEnumerator Yeet(){
-        GameObject Yeettmp = GameObject.Instantiate(yeet,new Vector3(this.transform.position.x+12,this.transform.position.y-10,0),Quaternion.identity);
+        GameObject Yeettmp = GameObject.Instantiate(yeet,new Vector3(this.transform.position.x+20,this.transform.position.y+10,0),Quaternion.identity);
         yield return new WaitForSeconds(1f);
         bossAnim.SetBool("yeet",true);
         yield return new WaitForSeconds(1.5f);

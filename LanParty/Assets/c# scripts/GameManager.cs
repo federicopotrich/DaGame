@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public WeponsManager[] armi;
-    public DistanceWeapon[] armi_distanti;
+    public DistanceWeapon[] armiDistanti;
     public ArmorsManager[] armature;
 
     public GameObject container;
@@ -54,17 +54,17 @@ public class GameManager : MonoBehaviour
             Destroy(gInstantiated.GetComponent<armorSelected>());
             gInstantiated.GetComponent<WeaponSelection>().id = armi[i];
         }
-        for (int i = 0; i < armi_distanti.Length; i++)
+        for (int i = 0; i < armiDistanti.Length; i++)
         {
             GameObject gInstantiated = GameObject.Instantiate(slotShop, new Vector3(), Quaternion.identity);
             gInstantiated.transform.SetParent(container.transform);
             gInstantiated.transform.localScale = new Vector3(1, 1, 1);
 
-            gInstantiated.transform.Find("Image").GetComponent<UnityEngine.UI.Image>().sprite = armi_distanti[i].imageWeapon;
-            gInstantiated.transform.Find("TextNome").GetComponent<TMPro.TextMeshProUGUI>().text = armi_distanti[i].nome;
-            gInstantiated.transform.Find("TextDmg").GetComponent<TMPro.TextMeshProUGUI>().text = "" + armi_distanti[i].dmg;
-            gInstantiated.transform.Find("TextCost").GetComponent<TMPro.TextMeshProUGUI>().text = "" + armi_distanti[i].cost;
-            gInstantiated.transform.Find("TextRarita").GetComponent<TMPro.TextMeshProUGUI>().text = armi_distanti[i].rarita;
+            gInstantiated.transform.Find("Image").GetComponent<UnityEngine.UI.Image>().sprite = armiDistanti[i].imageWeapon;
+            gInstantiated.transform.Find("TextNome").GetComponent<TMPro.TextMeshProUGUI>().text = armiDistanti[i].nome;
+            gInstantiated.transform.Find("TextDmg").GetComponent<TMPro.TextMeshProUGUI>().text = "" + armiDistanti[i].dmg;
+            gInstantiated.transform.Find("TextCost").GetComponent<TMPro.TextMeshProUGUI>().text = "" + armiDistanti[i].cost;
+            gInstantiated.transform.Find("TextRarita").GetComponent<TMPro.TextMeshProUGUI>().text = armiDistanti[i].rarita;
             Destroy(gInstantiated.GetComponent<armorSelected>());
             gInstantiated.GetComponent<WeaponSelection>().id = armi[i];
         }
@@ -149,8 +149,8 @@ public class GameManager : MonoBehaviour
 
                     g.AddComponent<italianoData>();
                     g.GetComponent<italianoData>().poeta = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].poeta;
-                    g.GetComponent<italianoData>().emoji = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].emoji;
-                    g.GetComponent<italianoData>().opzioni = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].opzioni;
+                    g.GetComponent<italianoData>().opere = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].opere;
+                    g.GetComponent<italianoData>().citazioni = GameObject.Find("JsonItaliano").GetComponent<jsonDataItaliano>().arrayData[listaItaliano[i]].citazioni;
                     DontDestroyOnLoad(g);
                 }
                 
@@ -234,6 +234,6 @@ public class storiaData : MonoBehaviour
 public class italianoData : MonoBehaviour
 {
     public string poeta;
-    public string emoji;
-    public string [] opzioni;
+    public string[] opere;
+    public string citazioni;
 }
