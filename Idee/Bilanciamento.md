@@ -5,7 +5,8 @@
 Per implementare una differenza, non solo stilistica, tra le armature ho pensato a questa formula per ricavare gli HP e un valore che verrà sottratto ai danni.
 
 Formula vita:  Vita = Vitabase + (3xValore Armatura) = 100 + (3xValore Armatura)
-On hit: DannoEffettivo = 
+
+On hit: DannoEffettivo = Danno - (Valore Armatura/5)
 
 ### Lista armature e statistiche
 
