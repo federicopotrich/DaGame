@@ -4,20 +4,54 @@
 ### Funzionamento armature
 Per implementare una differenza, non solo stilistica, tra le armature ho pensato a questa formula per ricavare gli HP e un valore che verrà sottratto ai danni.
 
-Formula vita:  VitaMax + (3*\Valore Armatura) = (100) + (3*\Valore Armatura)
-
+Formula vita:  Vita = Vitabase + (3xValore Armatura) = 100 + (3xValore Armatura)
+On hit: DannoEffettivo = 
 
 ### Lista armature e statistiche
 
 |Nome Armature|Valore Armatura|Costo|
 |:---:|:---:|:---:|
-|Jotaro|x|x|
-|Armatura del sole|x|x|
-|Salvagente|x|x|
-|Godfrey|x|x|
-|Camicia|x|x|
-|Clown|x|x|
-|Cowboy|x|x|
-|Knight|x|x|
-|Napoli|x|x|
-|Pepsi|x|x|
+|Salvagente|5|x|
+|Camicia|10|x|
+|Napoli|15|x|
+|Clown|20|x|
+|Cowboy|25|x|
+|Pepsi|30|x|
+|Knight|35|x|
+|Jotaro|40|x|
+|Armatura del sole|50|x|
+|Godfrey|60|x|
+
+## Danni
+### Lista Armi
+|Nome Arma|Danno|Tipo|Costo|
+|:---:|:---:|:---:|:---:|
+|Banana|3|Ranged|x|
+|Cat|3|Melee|x|
+|Dagger|10|Melee|x|
+|Sling Shot|5|Ranged|x|
+|Revolver|7|Ranged|x|
+|Claymore|14|Melee|x|
+|Excalibur|19|Melee|x|
+|Rivers of Blood|25|Melee|x|
+|Nail|31|Melee|x|
+|BOTRK|35|Melee|x|
+|Crucible|40|MELEE!|x|
+|BFG|14|RANGED||x|
+
+
+
+## Boss
+
+
+
+### Lista attacchi e danno
+|Nome Attacco|Danno|Descrizione|
+|:---:|:---:|:---:|
+|Punch|20|Squared Area Below Antennorg|
+|Stomp|18|AoE , Antennorg as Center|
+|StompEaster|23|Stomp but larger and trikier Area|
+|Yeet|25|AoE, triangular area to the side; pushed aside|
+|Ira degli dei|17|Largest AoE|
+|Spin|20|Large AoE, x4 hit|
+|Laser|42|Hits the whole map, spinning|
