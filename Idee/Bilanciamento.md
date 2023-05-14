@@ -5,7 +5,8 @@
 Per implementare una differenza, non solo stilistica, tra le armature ho pensato a questa formula per ricavare gli HP e un valore che verrà sottratto ai danni.
 
 Formula vita:  Vita = Vitabase + (3xValore Armatura) = 100 + (3xValore Armatura)
-On hit: DannoEffettivo = 
+
+On hit: DannoEffettivo = Danno - (Valore Armatura/5)
 
 ### Lista armature e statistiche
 
@@ -36,14 +37,13 @@ On hit: DannoEffettivo =
 |Rivers of Blood|25|Melee|x|
 |Nail|31|Melee|x|
 |BOTRK|35|Melee|x|
-|Crucible|40|MELEE!|x|
-|BFG|14|RANGED||x|
-
+|Crucible|66|MELEE!|x|
+|BFG|14|RANGED!|x|
 
 
 ## Boss
-
-
+### Hp Boss
+**HP Boss: NumeroGiocatori x 980**
 
 ### Lista attacchi e danno
 |Nome Attacco|Danno|Descrizione|
