@@ -55,7 +55,6 @@ public class LobbyManager : NetworkBehaviour
                 break;
             }
         }
-
         if (allClientReady)
         {
             GameObject g = Instantiate(new GameObject());

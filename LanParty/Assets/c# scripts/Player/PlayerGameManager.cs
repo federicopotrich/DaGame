@@ -18,13 +18,10 @@ public class PlayerGameManager : MonoBehaviour
         myStats.MaxHP = myStats.CurrentHP = 150;
         myStats.coins = 0;
         myStats.floor = 0;
-        this.gameObject.AddComponent<PlayerControllerNet>();
 
         Interactions interactionPlayer = this.gameObject.AddComponent<Interactions>();
 
         interactionPlayer.s = myStats;
-        
-        this.gameObject.GetComponent<PlayerControllerNet>().speed = 10;
         
     }
     void Update()

@@ -2862,9 +2862,9 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-    Address: 192.168.213.137
+    Address: 192.168.98.137
     Port: 7777
-    ServerListenAddress: 192.168.213.137
+    ServerListenAddress: 192.168.98.137
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0

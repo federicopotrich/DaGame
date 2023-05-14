@@ -6,7 +6,7 @@ using System.Linq;
 
 public class GameManagerFixed : NetworkBehaviour
 {
-
+    private List<Camera> allCameras = new List<Camera>();
     // Questa è un'istanza singleton del GameManager
     public static GameManagerFixed Instance { get; private set; }
     bool b = true;
@@ -32,13 +32,13 @@ public class GameManagerFixed : NetworkBehaviour
     {
         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
-            List<ulong> clientsList = new List<ulong>(clientsCompleted);
-            int clientIndex = clientsList.IndexOf(clientId);
-            GameObject cameraObj = GameObject.Find("Camera: " + clientIndex);
-            // cameraObj.tag = "MainCamera";
-            // cameraObj.GetComponent<Camera>().enabled = true;
-            // cameraObj.GetComponent<AudioListener>().enabled = true; // se vuoi abilitare anche l'AudioListener della telecamera
+            if (NetworkManager.IsClient)
+            {
+                // Spawn del player
+                Transform playerTransform = Instantiate(playerPrefab);
+                // Spawn del player object
+                playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
+            }
         }
-
     }
 }

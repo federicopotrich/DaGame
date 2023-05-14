@@ -7,7 +7,7 @@ public class PlayerControllerNet : NetworkBehaviour
     public float speed;
     void Start()
     {
-        
+        GameObject.Find("Camera").GetComponent<CameraFollowPlayer>().FollowPlayer(transform);
     }
 
     // Update is called once per frame
