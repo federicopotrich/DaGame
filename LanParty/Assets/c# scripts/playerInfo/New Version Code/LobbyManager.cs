@@ -17,33 +17,26 @@ public class LobbyManager : NetworkBehaviour
 
     public void SetPlayerReady()
     {
-        SetPlayerReadyServerRpc();
+        if (NetworkManager.Singleton.IsClient && !NetworkManager.Singleton.IsHost)
+        {
+            TMP_InputField inputField = GameObject.FindObjectOfType<TMP_InputField>();
+            TMP_Dropdown DropDownField = GameObject.FindObjectOfType<TMP_Dropdown>();
+            if (inputField != null && inputField.text != "")
+            {
+                Debug.Log(inputField.text);
+                SetPlayerReadyServerRpc(inputField.text, "" + DropDownField.value);
+            }
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]
-    private void SetPlayerReadyServerRpc(ServerRpcParams serverRpcParams = default)
+    private void SetPlayerReadyServerRpc(string namePlayer, string classPlayer, ServerRpcParams serverRpcParams = default)
     {
         UtenteReady u = new UtenteReady();
         u.ready = true;
-        if (!NetworkManager.Singleton.IsHost)
-        {
-            TMP_InputField inputField = GameObject.FindObjectOfType<TMP_InputField>();
-            if (inputField != null && inputField.text != "")
-            {
-                u._name = inputField.text;
-            }
-            else
-            {
-                u._name = "guest";
-            }
-        }
-        else
-        {
-            u._name = "host";
-        }
-
-        Debug.Log(u._name);
-
+        u._name = namePlayer;
+        u._classPlayer = classPlayer;
+        
         playersReadyServerRpcDic[serverRpcParams.Receive.SenderClientId] = u;
         bool allClientReady = true;
 
@@ -72,6 +65,7 @@ public class UtenteReady
 {
     public bool ready;
     public string _name;
+    public string _classPlayer;
 }
 
 public class c : MonoBehaviour
