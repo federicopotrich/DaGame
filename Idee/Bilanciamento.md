@@ -27,16 +27,30 @@ On hit: DannoEffettivo = Danno - (Valore Armatura/5)
 ### Lista Armi
 |Nome Arma|Danno|Tipo|Costo|
 |:---:|:---:|:---:|:---:|
+|Sottiletta|1|Ranged|x|
+|Cannolo|2|Ranged|x|
 |Banana|3|Ranged|x|
 |Cat|3|Melee|x|
+|Chiave Inglese|7|Melee|x|
+|Baseball Bat|9|Melee|x|
 |Dagger|10|Melee|x|
 |Sling Shot|5|Ranged|x|
+|Crocs|6|Ranged|x|
 |Revolver|7|Ranged|x|
+|Shuriken|8|Ranged|x|
+|Bibbia|9|Ranged|x|
+|Arco|10|Ranger|x|
+|Meowstic|11|Ranged|x|
+|Segnale di Stop|12|Melee|x|
 |Claymore|14|Melee|x|
+|Ascia|17|Melee|x|
 |Excalibur|19|Melee|x|
+|Homa|23|Melee|x|
 |Rivers of Blood|25|Melee|x|
 |Nail|31|Melee|x|
 |BOTRK|35|Melee|x|
+|Spada Laser (Jedi)|40|Melee|x|
+|Spada Laser (Sith)|40|Melee|x|
 |Crucible|66|MELEE!|x|
 |BFG|14|RANGED!|x|
 
