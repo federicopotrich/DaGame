@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6876296826309534031}
   - component: {fileID: 6876296826309534024}
+  - component: {fileID: 8317158156128656007}
   m_Layer: 0
   m_Name: spin
   m_TagString: Untagged
@@ -49,6 +50,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 26
+--- !u!114 &8317158156128656007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6876296826309534025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 961e51a0b17e84c40b9324bd6c714aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dmg: 20
+  active: 0
+  spin: 0
 --- !u!1 &6876296827928747174
 GameObject:
   m_ObjectHideFlags: 0
