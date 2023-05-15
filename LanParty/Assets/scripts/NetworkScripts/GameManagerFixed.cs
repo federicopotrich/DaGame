@@ -32,10 +32,13 @@ public class GameManagerFixed : NetworkBehaviour
     {
         foreach (ulong clientId in NetworkManager.Singleton.ConnectedClientsIds)
         {
+
             if (NetworkManager.IsClient)
             {
                 // Spawn del player
                 Transform playerTransform = Instantiate(playerPrefab);
+                playerTransform.GetComponent<PlayerGameManager>().name = GameObject.Find("dataConnectedPlayers").GetComponent<c>().players[clientId]._name;
+                playerTransform.GetComponent<PlayerGameManager>().team = GameObject.Find("dataConnectedPlayers").GetComponent<c>().players[clientId]._team;
                 // Spawn del player object
                 playerTransform.GetComponent<NetworkObject>().SpawnAsPlayerObject(clientId, true);
             }

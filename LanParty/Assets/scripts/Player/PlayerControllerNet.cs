@@ -9,8 +9,7 @@ public class PlayerControllerNet : NetworkBehaviour
         transform.Find("MainCameraPlayer").gameObject.SetActive(IsOwner);
         base.OnNetworkSpawn(); // Not sure if this is needed though, but good to have it.
 
-        speed = 10;
-
+        speed = 5;
     }
 
     // Update is called once per frame

@@ -9,8 +9,11 @@ public class PlayerGameManager : MonoBehaviour
     public Stats myStats;
     // Start is called before the first frame update
     public string namePlayer;
+    public string team;
     void Start()
     {
+        arrPiani = GameObject.FindGameObjectsWithTag("Piani");
+
         namePlayer = GameObject.Find("dataConnectedPlayers").GetComponent<c>().players[NetworkManager.Singleton.LocalClientId]._name;
         this.gameObject.AddComponent<PlayerInventory>();
 
@@ -22,7 +25,7 @@ public class PlayerGameManager : MonoBehaviour
         Interactions interactionPlayer = this.gameObject.AddComponent<Interactions>();
 
         interactionPlayer.s = myStats;
-        
+        interactionPlayer.piani = arrPiani;
     }
     void Update()
     {
@@ -43,21 +46,23 @@ public class PlayerGameManager : MonoBehaviour
     }
     public class Interactions : MonoBehaviour
     {
+        public GameObject [] piani;
         public Stats s;
         void OnCollisionEnter2D(Collision2D coll){
             switch (coll.gameObject.name)
             {
                 case "up":
-                    if (s.floor >= 0 && s.floor <= 2)
+                    if (s.floor <= 2)
                     {
+                        this.gameObject.transform.position = piani[s.floor+1].transform.Find("------Scale------").Find(coll.gameObject.transform.parent.name).Find("down").Find("SpawnPoint").position;
                         s.floor++;
                     }
                     break;
                 case "down":
-                    if (s.floor >= 1 && s.floor <= 3)
+                    if (s.floor >= 1)
                     {
+                        this.gameObject.transform.position = piani[s.floor-1].transform.Find("------Scale------").Find(coll.gameObject.transform.parent.name).Find("down").Find("SpawnPoint").position;
                         s.floor--;
-                        
                     }
                     break;
             }
