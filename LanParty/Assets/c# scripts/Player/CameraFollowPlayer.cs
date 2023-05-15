@@ -4,15 +4,15 @@ using UnityEngine;
 using Cinemachine;
 public class CameraFollowPlayer : MonoBehaviour
 {
-    private CinemachineVirtualCamera camera;
+    private CinemachineVirtualCamera _camera;
     
 
     // Update is called once per frame
     void Awake()
     {
-        camera = GetComponent<CinemachineVirtualCamera>();
+        _camera = GetComponent<CinemachineVirtualCamera>();
     }
     public void FollowPlayer(Transform tr){
-        camera.Follow = tr;
+        _camera.Follow = tr;
     }
 }

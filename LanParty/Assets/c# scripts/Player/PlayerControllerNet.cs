@@ -5,9 +5,9 @@ using Unity.Netcode;
 public class PlayerControllerNet : NetworkBehaviour
 {
     public float speed;
-    void Start()
-    {
-        GameObject.Find("Camera").GetComponent<CameraFollowPlayer>().FollowPlayer(transform);
+    public override void OnNetworkSpawn() { // This is basically a Start method
+        transform.Find("MainCameraPlayer").gameObject.SetActive(IsOwner);
+        base.OnNetworkSpawn(); // Not sure if this is needed though, but good to have it.
     }
 
     // Update is called once per frame
