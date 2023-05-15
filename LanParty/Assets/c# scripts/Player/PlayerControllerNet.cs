@@ -8,6 +8,9 @@ public class PlayerControllerNet : NetworkBehaviour
     public override void OnNetworkSpawn() { // This is basically a Start method
         transform.Find("MainCameraPlayer").gameObject.SetActive(IsOwner);
         base.OnNetworkSpawn(); // Not sure if this is needed though, but good to have it.
+
+        speed = 10;
+
     }
 
     // Update is called once per frame
