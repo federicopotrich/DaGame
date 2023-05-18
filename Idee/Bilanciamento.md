@@ -12,16 +12,16 @@ On hit: DannoEffettivo = Danno - (Valore Armatura/5)
 
 |Nome Armature|Valore Armatura|Costo|
 |:---:|:---:|:---:|
-|Salvagente|5|x|
-|Camicia|10|x|
-|Napoli|15|x|
-|Clown|20|x|
-|Cowboy|25|x|
-|Pepsi|30|x|
-|Knight|35|x|
-|Jotaro|40|x|
-|Armatura del sole|50|x|
-|Godfrey|60|x|
+|Salvagente|5|50|
+|Camicia|10|70|
+|Napoli|15|80|
+|Clown|20|104|
+|Cowboy|25|116|
+|Pepsi|30|150|
+|Knight|35|173|
+|Jotaro|40|333|
+|Armatura del sole|50|420|
+|Godfrey|60|620|
 
 ## Danni
 ### Lista Armi
