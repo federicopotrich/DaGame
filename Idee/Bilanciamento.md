@@ -27,32 +27,32 @@ On hit: DannoEffettivo = Danno - (Valore Armatura/5)
 ### Lista Armi
 |Nome Arma|Danno|Tipo|Costo|
 |:---:|:---:|:---:|:---:|
-|Sottiletta|1|Ranged|x|
-|Cannolo|2|Ranged|x|
-|Banana|3|Ranged|x|
-|Cat|3|Melee|x|
-|Chiave Inglese|7|Melee|x|
-|Baseball Bat|9|Melee|x|
-|Dagger|10|Melee|x|
-|Sling Shot|5|Ranged|x|
-|Crocs|6|Ranged|x|
-|Revolver|7|Ranged|x|
-|Shuriken|8|Ranged|x|
-|Bibbia|9|Ranged|x|
-|Arco|10|Ranger|x|
-|Meowstic|11|Ranged|x|
-|Segnale di Stop|12|Melee|x|
-|Claymore|14|Melee|x|
-|Ascia|17|Melee|x|
-|Excalibur|19|Melee|x|
-|Homa|23|Melee|x|
-|Rivers of Blood|25|Melee|x|
-|Nail|31|Melee|x|
-|BOTRK|35|Melee|x|
-|Spada Laser (Jedi)|40|Melee|x|
-|Spada Laser (Sith)|40|Melee|x|
-|Crucible|66|MELEE!|x|
-|BFG|14|RANGED!|x|
+|Sottiletta|1|Ranged|20|
+|Cannolo|2|Ranged|23|
+|Banana|3|Ranged|30|
+|Cat|3|Melee|25|
+|Chiave Inglese|7|Melee|50|
+|Baseball Bat|9|Melee|75|
+|Dagger|10|Melee|80|
+|Sling Shot|5|Ranged|50|
+|Crocs|6|Ranged|69|
+|Revolver|7|Ranged|75|
+|Shuriken|8|Ranged|80|
+|Bibbia|9|Ranged|104|
+|Arco|10|Ranger|110|
+|Meowstic|11|Ranged|130|
+|Segnale di Stop|12|Melee|100|
+|Claymore|14|Melee|150|
+|Ascia|17|Melee|180|
+|Excalibur|19|Melee|208|
+|Homa|23|Melee|255|
+|Rivers of Blood|25|Melee|375|
+|Nail|31|Melee|420|
+|BOTRK|35|Melee|660|
+|Spada Laser (Jedi)|40|Melee|696|
+|Spada Laser (Sith)|40|Melee|696|
+|Crucible|66|MELEE!|800|
+|BFG|14|RANGED!|200|
 
 
 ## Boss
