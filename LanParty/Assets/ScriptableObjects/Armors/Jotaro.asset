@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nome: Jotaro
   typeItem: 0
-  image_weapon_Armor: {fileID: 0}
+  image_weapon_Armor: {fileID: 21300000, guid: cb05000447b23684283bfb58a47ec2fb, type: 3}
   image_bullet: {fileID: 0}
   DistanceWeapon_MeleeWeapon: 0
   valoreArmatura: 40
