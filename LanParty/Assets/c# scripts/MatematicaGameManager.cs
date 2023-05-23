@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MatematicaGameManager : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class MatematicaGameManager : MonoBehaviour
     private TextMeshProUGUI textTarget;  
     private TextMeshProUGUI textCurrent;     
 
+
+    private float startTime;
+    private float timerDuration = 120f;
     public Sprite [] numbers;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +32,7 @@ public class MatematicaGameManager : MonoBehaviour
         int [,] matrix = nextBigTable(); 
         textTarget.text = "target: "+target;
         textCurrent.text = "total points "+ points;
+        startTime = Time.time;
     }
 
     private int[,] nextBigTable() {
@@ -71,7 +76,12 @@ public class MatematicaGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         float elapsedTime = Time.time - startTime; // Calculate the elapsed time
 
+        if (elapsedTime >= timerDuration)
+        {
+            SceneManager.UnloadSceneAsync("MateScene");
+        }
     }
 
     public void eventMouseCellListener(GameObject cella){
