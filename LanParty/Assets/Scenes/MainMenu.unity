@@ -646,6 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10784a3090bf54a4aada32b7083dd538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ip: 
   startHostButton: {fileID: 898884013}
   startClientButton: {fileID: 1915324683}
   continueButton: {fileID: 2047061999}
@@ -2861,21 +2862,9 @@ MonoBehaviour:
   m_MaxConnectAttempts: 60
   m_DisconnectTimeoutMS: 30000
   ConnectionData:
-<<<<<<< HEAD
-<<<<<<< HEAD
-    Address: 192.168.7.28
+    Address: 192.168.6.137
     Port: 7777
-    ServerListenAddress: 192.168.7.28
-=======
-    Address: 192.168.145.137
-    Port: 7777
-    ServerListenAddress: 192.168.145.137
->>>>>>> 5356f3fe17312d19f1c5fd697054964ab177b037
-=======
-    Address: 192.168.43.129
-    Port: 7777
-    ServerListenAddress: 192.168.43.129
->>>>>>> ee73100654ae61171a3d64c114d15d270476f17e
+    ServerListenAddress: 192.168.6.137
   DebugSimulator:
     PacketDelayMS: 0
     PacketJitterMS: 0
